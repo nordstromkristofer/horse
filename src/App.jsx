@@ -42,7 +42,7 @@ export default function App() {
 
   return s.products.length ? <Router>
     <Routes>
-    <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/product-list" element={<ProductList />} />
       <Route path="/product-detail/:id" element={<ProductDetail />} />
       <Route path="/product-edit/:id" element={<ProductEdit />} />
@@ -50,3 +50,4 @@ export default function App() {
     </Routes>
   </Router> : null;
 }
+

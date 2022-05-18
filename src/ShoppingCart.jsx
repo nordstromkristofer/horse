@@ -36,7 +36,6 @@ export default function ShoppingCart() {
             {s.cartContents.map((row, i) => <tr key={i}>
               <td>{row.product.name}</td>
               <td className="text-end">
-                // Swedish kronor formatter
                 <input className="text-end" style={{ width: 50 }} type="number" min={1} max={100} {...row.bind('quantity')} />
               </td>
               <td className="text-end" style={{ width: 100 }}>{sweFormat(row.product.price).sweFormat(2)}</td>
@@ -45,7 +44,7 @@ export default function ShoppingCart() {
             <tr className="fw-bold">
               <td>Sum</td>
               <td colSpan={3} className="text-end">
-                {totalSum.sweFormat(2)}
+                {sweFormat(totalSum)}
               </td>
             </tr>
           </tbody>

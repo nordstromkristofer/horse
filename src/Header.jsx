@@ -9,7 +9,8 @@ const Header = () => {
         
       <br></br> <br></br>
       
-     {
+      {
+        //Search bar on navbar
           <div>
             <input placeholder="Sök" />
           </div>
