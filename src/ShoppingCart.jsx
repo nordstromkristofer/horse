@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { empty, save } from './utilities/shoppingCartLogic';
 import { useEffect } from 'react';
+import { sweFormat } from './utilities/currencyFormatter';
 
 export default function ShoppingCart() {
 
@@ -18,7 +19,7 @@ export default function ShoppingCart() {
 
   return <Container className="shoppingCart">
     <Row><Col>
-      <h1>Shopping cart</h1>
+      <h1>Shopping cart 🛒</h1>
     </Col></Row>
     <Row>
       <Col>
@@ -35,15 +36,16 @@ export default function ShoppingCart() {
             {s.cartContents.map((row, i) => <tr key={i}>
               <td>{row.product.name}</td>
               <td className="text-end">
+                // Swedish kronor formatter
                 <input className="text-end" style={{ width: 50 }} type="number" min={1} max={100} {...row.bind('quantity')} />
               </td>
-              <td className="text-end" style={{ width: 100 }}>{(row.product.price).toFixed(2)}</td>
-              <td className="text-end" style={{ width: 100 }}>{(row.quantity * row.product.price).toFixed(2)}</td>
+              <td className="text-end" style={{ width: 100 }}>{sweFormat(row.product.price).sweFormat(2)}</td>
+              <td className="text-end" style={{ width: 100 }}>{sweFormat(row.quantity * row.product.price).sweFormat(2)}</td>
             </tr>)}
             <tr className="fw-bold">
               <td>Sum</td>
               <td colSpan={3} className="text-end">
-                {totalSum.toFixed(2)}
+                {totalSum.sweFormat(2)}
               </td>
             </tr>
           </tbody>
