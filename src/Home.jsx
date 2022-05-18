@@ -4,9 +4,11 @@ const Home = () => {
   return (
 
     <div>
-      <h2 className='text-center'>Hallå! !!!!
+
+      <h2 className='text-center'>Hallå World!
+
       </h2>
-      </div>
+    </div>
   )
 }
 
