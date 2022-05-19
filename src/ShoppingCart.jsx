@@ -38,8 +38,8 @@ export default function ShoppingCart() {
               <td className="text-end">
                 <input className="text-end" style={{ width: 50 }} type="number" min={1} max={100} {...row.bind('quantity')} />
               </td>
-              <td className="text-end" style={{ width: 100 }}>{sweFormat(row.product.price).sweFormat(2)}</td>
-              <td className="text-end" style={{ width: 100 }}>{sweFormat(row.quantity * row.product.price).sweFormat(2)}</td>
+              <td className="text-end" style={{ width: 100 }}>{sweFormat(row.product.price)}</td>
+              <td className="text-end" style={{ width: 100 }}>{sweFormat(row.quantity * row.product.price)}</td>
             </tr>)}
             <tr className="fw-bold">
               <td>Sum</td>
