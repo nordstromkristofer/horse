@@ -18,7 +18,6 @@ import ShoppingCart from './ShoppingCart'
 import Home from './Home';
 import Backoffice from './Backoffice';
 import BackofficeCamera from './BackofficeCamera';
-import BackofficeCreate from './BackofficeCreate';
 
 // Create classes used for fetching from the REST-api
 const { Product, Categorie: Category } = factory;
@@ -53,7 +52,6 @@ export default function App() {
       <Route path="/product-edit/:id" element={<ProductEdit />} />
       <Route path="/shopping-cart" element={<ShoppingCart />} />
       <Route path='/backoffice' element={<Backoffice />} />
-      <Route path='/backoffice-create' element={<BackofficeCreate />} />
       <Route path='/backoffice-camera' element={<BackofficeCamera />} />
     </Routes>
   </Router> : null;
