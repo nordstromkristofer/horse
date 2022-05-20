@@ -5,7 +5,7 @@ const Home = () => {
 
     <div>
 
-      <h2 className='text-center'>Hallå World!
+      <h2 className='text-center'>Hallå World! Look at my horse its amazing!🐴
 
       </h2>
     </div>
