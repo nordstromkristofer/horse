@@ -21,14 +21,6 @@ export default function ProductDetail() {
     category.id === categoryId
   )?.name || 'none';
 
-  let navigate = useNavigate();
-
-  function buy() {
-    // Add the product to the cart
-    add(product);
-    // Show the cart
-    navigate('/shopping-cart');
-  }
 
   return <Container className="productList">
     <Row><Col>
@@ -42,14 +34,11 @@ export default function ProductDetail() {
     <Row><Col><p>{description}</p></Col></Row>
     <Row><Col><p>Price: {price} SEK</p></Col></Row>
     <Row><Col>
+      <Link to={`/product-edit/${id}`}>
+        <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
+      </Link>
     </Col></Row>
     <Row><Col>
-
-      <label>
-        Antal
-        <input type="text" name="antal" placeholder='1' />
-        <button type="button" onClick={buy} className="mt-2 btn btn-primary float-end">Buy</button>
-      </label>
 
     </Col></Row>
   </Container>
