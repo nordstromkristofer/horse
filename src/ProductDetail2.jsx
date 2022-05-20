@@ -1,11 +1,12 @@
 import { useStates } from './utilities/states';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { add } from './utilities/shoppingCartLogic';
+
 
 export default function ProductDetail() {
 
   let s = useStates('main');
+  let navigate = useNavigate();
 
   // Find the product
   let { id } = useParams();
@@ -20,6 +21,13 @@ export default function ProductDetail() {
   let categoryName = s.categories.find(category =>
     category.id === categoryId
   )?.name || 'none';
+
+  async function deleteBtn() {
+    // Save to db
+    await product.delete();
+    // Navigate to detail page
+    navigate(`/product-list2/`);
+  }
 
 
   return <Container className="productList">
@@ -37,8 +45,9 @@ export default function ProductDetail() {
       <Link to={`/product-edit/${id}`}>
         <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
       </Link>
-      <Link to={`/product-delete/${id}`}>
-        <Button variant="danger" type="button" className="my-4 btn btn-primary float-left">Delete</Button>
+      <Link to={`/product-edit/${id}`}>
+        <Button variant="danger" type="button" onClick={deleteBtn} className="my-4 btn btn-primary float-left">Delete</Button>
+
       </Link>
     </Col></Row>
     <Row><Col>
