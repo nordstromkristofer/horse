@@ -11,6 +11,7 @@ import { init } from './utilities/shoppingCartLogic';
 import './utilities/scrollBehavior';
 
 import ProductList from './ProductList';
+import ProductList2 from './ProductList2';
 import ProductDetail from './ProductDetail';
 import ProductEdit from './ProductEdit';
 import ShoppingCart from './ShoppingCart'
@@ -47,6 +48,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/product-list" element={<ProductList />} />
+      <Route path="/product-list2" element={<ProductList2 />} />
       <Route path="/product-detail/:id" element={<ProductDetail />} />
       <Route path="/product-edit/:id" element={<ProductEdit />} />
       <Route path="/shopping-cart" element={<ShoppingCart />} />

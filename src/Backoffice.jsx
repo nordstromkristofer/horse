@@ -1,8 +1,11 @@
 import React from 'react'
+import ProductList2 from './ProductList2'
 
 const Backoffice = () => {
   return (
-    <div>Backoffice</div>
+    <div>
+      <ProductList2 />
+    </div>
   )
 }
 
