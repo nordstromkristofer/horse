@@ -1,5 +1,5 @@
 import { useStates } from './utilities/states';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { add } from './utilities/shoppingCartLogic';
 
@@ -24,7 +24,7 @@ export default function ProductDetail() {
 
   return <Container className="productList">
     <Row><Col>
-      <Link to={`/`}>
+      <Link to={`/Backoffice`}>
         <button type="button" className="my-4 btn btn-primary">Back to list</button>
         <hr />
       </Link>
@@ -36,6 +36,9 @@ export default function ProductDetail() {
     <Row><Col>
       <Link to={`/product-edit/${id}`}>
         <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
+      </Link>
+      <Link to={`/product-delete/${id}`}>
+        <Button variant="danger" type="button" className="my-4 btn btn-primary float-left">Delete</Button>
       </Link>
     </Col></Row>
     <Row><Col>
