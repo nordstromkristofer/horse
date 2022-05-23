@@ -1,25 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-<<<<<<< HEAD
 
-const Create = () => (
-  <div>
-    <Form>
-      <label>Namn</label>
-      <input placeholder='Namn' />
-
-      <label>Beskrivning</label>
-      <input placeholder='Beskrivning' />
-
-      <label>Pris</label>
-      <input placeholder='Pris' />
-
-      <Button type='submit'>OK</Button>
-    </Form>
-  </div>
-)
-=======
-import axios from 'axios'
 
 const Create = () => {
 
@@ -64,6 +45,5 @@ const Create = () => {
     </div>
   )
 }
->>>>>>> dev
 
 export default Create
