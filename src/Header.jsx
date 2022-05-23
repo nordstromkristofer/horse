@@ -1,15 +1,10 @@
 import React from 'react';
 
-
-
  function handleChange(value, handleChange, event) {
     console.log(event.target.value); 
       }
 const Header = () => {
  
-
-
-  
   return (
     <div className='header'>  
         <a className='text-left' href="/">Stallet</a><br></br>
@@ -17,8 +12,6 @@ const Header = () => {
         <a className='text-left' href="/shopping-cart">Varukorg</a><br></br>
         
       <br></br> <br></br>
-
-
       
       {
         //Search bar on navbar
