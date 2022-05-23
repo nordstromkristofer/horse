@@ -18,6 +18,7 @@ import Home from './Home';
 import Backoffice from './Backoffice';
 import BackofficeCamera from './BackofficeCamera';
 
+
 // Create classes used for fetching from the REST-api
 const { Product, Categorie: Category } = factory;
 
@@ -27,8 +28,11 @@ export default function App() {
     products: [],
     categories: [],
     chosenCategoryId: 0,
-    cartContents: []
+    cartContents: [],
+    
+    
   });
+  
 
   useEffect(() => {
     (async () => {
@@ -42,7 +46,8 @@ export default function App() {
     })();
   }, []);
 
-  return s.products.length ? <Router>
+  return s.products.length ?
+  <Router>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/product-list" element={<ProductList />} />
@@ -51,6 +56,8 @@ export default function App() {
       <Route path="/shopping-cart" element={<ShoppingCart />} />
       <Route path='/Backoffice' element={<Backoffice />} />
       <Route path='/Backoffice-camera' element={<BackofficeCamera />} />
+  
     </Routes>
   </Router> : null;
 }
+

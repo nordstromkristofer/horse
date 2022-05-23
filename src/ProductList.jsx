@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { scrollRestore } from './utilities/scrollBehavior';
 import CategorySelect from './CategorySelect';
-
+import { sweFormat } from './utilities/currencyFormatter';
 
 export default function ProductList() {
 
@@ -15,7 +15,7 @@ export default function ProductList() {
   function showDetail(id) {
     navigate(`/product-detail/${id}`);
   }
-
+ 
   return <Container className="productList">
     <Row><Col><h1>Products</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
@@ -32,7 +32,7 @@ export default function ProductList() {
             <p>{description}</p>
           </Col>
           <Col xxl="12">
-            <p><b>Price:</b> {price} SEK
+            <p><b>Price:</b> {sweFormat(price)} 
             </p>
           </Col>
         </Card>
