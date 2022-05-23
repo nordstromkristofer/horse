@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
- function handleChange(value, handleChange, event) {
+function handleChange(event) {
     console.log(event.target.value); 
       }
 const Header = () => {
@@ -25,8 +25,8 @@ const Header = () => {
           <div>
           <input
             placeholder="Golden Horse 🔍"
-           value={value}
-            onChange={handleChange} />
+            value={event}
+            onChange={handleChange}  />
           </div>
         }
   </div>
