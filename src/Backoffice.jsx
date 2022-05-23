@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductList2 from './ProductList2'
+import ProductList2 from './ProductLists'
 import Create from './Create'
 
 const Backoffice = () => {
