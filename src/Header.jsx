@@ -1,11 +1,13 @@
 import React from 'react';
 
- function handleChange() {
-    console.log(handleChange); 
+
+
+ function handleChange(value, handleChange, event) {
+    console.log(event.target.value); 
       }
 const Header = () => {
  
-     
+
 
   
   return (
@@ -15,15 +17,20 @@ const Header = () => {
         <a className='text-left' href="/shopping-cart">Varukorg</a><br></br>
         
       <br></br> <br></br>
+
+
       
       {
         //Search bar on navbar
           <div>
-            <input placeholder="Sök 🔍" onChange={handleChange} />
+          <input
+            placeholder="Golden Horse 🔍"
+           value={value}
+            onChange={handleChange} />
           </div>
         }
   </div>
   )
 }
- console.log(handleChange);
+
 export default Header;
