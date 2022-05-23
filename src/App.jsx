@@ -58,7 +58,6 @@ export default function App() {
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/product-edit/:id" element={<ProductEdit />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
-        <Route path='/backoffice-create' element={<BackofficeCreate />} />
         <Route path='/backoffice-camera' element={<BackofficeCamera />} />
         <Route path='/Backoffice' element={<Backoffice />} />
       </Routes>
