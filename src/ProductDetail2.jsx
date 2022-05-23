@@ -26,7 +26,7 @@ export default function ProductDetail() {
     // Save to db
     await product.delete();
     // Navigate to detail page
-    navigate(`/product-list2/`);
+    navigate(`/Backoffice/`);
   }
 
 
