@@ -2,8 +2,13 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
  function handleChange(value, handleChange, event) {
     console.log(event.target.value); 
+=======
+function handleChange() {
+  console.log(handleChange); 
+>>>>>>> origin/dev
       }
 const Header = () => {
  
@@ -17,11 +22,16 @@ const Header = () => {
         <a className='text-left' href="/shopping-cart">Varukorg</a><br></br>
         
       <br></br> <br></br>
+
+
       
       {
         //Search bar on navbar
           <div>
-            <input placeholder="Sök" />
+          <input
+            placeholder="Golden Horse 🔍"
+           
+            onChange={handleChange}  />
           </div>
         }
   </div>
