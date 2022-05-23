@@ -15,7 +15,7 @@ export default function ProductList() {
   function showDetail(id) {
     navigate(`/product-detail/${id}`);
   }
-
+ 
   return <Container className="productList">
     <Row><Col><h1>Products</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
