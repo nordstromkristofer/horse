@@ -10,8 +10,8 @@ import { factory } from './utilities/FetchHelper';
 import { init } from './utilities/shoppingCartLogic';
 import './utilities/scrollBehavior';
 
-import ProductList from './ProductList';
-import ProductList2 from './ProductList2';
+import ProductList from './ProductLists';
+import ProductList2 from './ProductLists';
 import ProductDetail from './ProductDetail';
 import ProductDetail2 from './ProductDetail2';
 import ProductEdit from './ProductEdit';
