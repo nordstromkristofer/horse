@@ -2,6 +2,7 @@ import { useStates } from './utilities/states';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams, useNavigate } from "react-router-dom";
 import CategorySelect from './CategorySelect';
+import { sweFormat } from './utilities/currencyFormatter';
 
 export default function ProductDetail() {
 
@@ -23,7 +24,7 @@ export default function ProductDetail() {
   return <Container className="productList">
     <Row><Col><h1>{name}</h1></Col></Row>
     <Row><Col><p>{description}</p></Col></Row>
-    <Row><Col><p>Price: {price} SEK</p></Col></Row>
+    <Row><Col><p>Price: {sweFormat(price)} </p></Col></Row>
     <Row><Col>
       <label className="mt-3">Name:
         <input className="form-control" {...product.bind('name')} />

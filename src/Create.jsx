@@ -1,29 +1,46 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import axios from 'axios'
 
-export default function Create() {
+const Create = () => {
 
-  const [horseName, setHorseName] = useState('');
-  const [description, setDescription] = useState('');
-  const [price, setPrice] = useState('');
+  const [horseData, setHorseData] = useState({
+    categoryId: 1, // Do not hard code? Let the user choose?
+    name: "",
+    description: "",
+    price: 0
+  });
 
-  const postData = () => {
-    console.log(horseName)
+  const handleInputData = e => {
+    setHorseData(data => ({
+      ...data,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const SubmitData = async e => {
+    e.preventDefault()
+    let result = await (await fetch('/api/products', {
+      method: "POST",
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(horseData)
+    })).json();
+    console.log(result)
   }
 
   return (
     <div>
-      <Form>
+      <Form onSubmit={SubmitData}>
         <label>Namn</label>
-        <input placeholder='Namn' onChange={(e) => setHorseName(e.target.value)} />
+        <input value={horseData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
         <label>Beskrivning</label>
-        <input placeholder='Beskrivning' />
+        <input value={horseData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
 
         <label>Pris</label>
-        <input placeholder='Pris' />
+        <input value={horseData.price} name="price" onChange={handleInputData} placeholder='Pris' />
 
-        <Button onClick={postData} type='submit'>OK</Button>
+        <Button type='submit'>OK</Button>
       </Form>
     </div>
   )
