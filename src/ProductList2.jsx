@@ -13,7 +13,7 @@ export default function ProductList2() {
   let navigate = useNavigate();
 
   function showDetail(id) {
-    navigate(`/product-detail/${id}`);
+    navigate(`/product-detail2/${id}`);
   }
 
   return <Container className="productList">
