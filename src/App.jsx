@@ -19,7 +19,7 @@ import ShoppingCart from './ShoppingCart'
 import Home from './Home';
 import Backoffice from './Backoffice';
 import BackofficeCamera from './BackofficeCamera';
-import BackofficeCreate from './BackofficeCreate';
+// import BackofficeCreate from './BackofficeCreate';
 
 
 
@@ -34,11 +34,6 @@ export default function App() {
     categories: [],
     chosenCategoryId: 0,
     cartContents: [],
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> origin/dev
   });
   
 

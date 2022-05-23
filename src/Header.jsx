@@ -2,13 +2,8 @@ import React from 'react';
 
 
 
-<<<<<<< HEAD
  function handleChange(value, handleChange, event) {
     console.log(event.target.value); 
-=======
-function handleChange() {
-  console.log(handleChange); 
->>>>>>> origin/dev
       }
 const Header = () => {
  

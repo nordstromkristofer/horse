@@ -8,7 +8,7 @@ import Header from './Header';
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <React.StrictMode>
-    {/* <Header /> */}
+    <Header />
     <App />
   </React.StrictMode>
 );
