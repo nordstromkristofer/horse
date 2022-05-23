@@ -17,31 +17,15 @@ const Header = () => {
         <a className='text-left' href="/shopping-cart">Varukorg</a><br></br>
         
       <br></br> <br></br>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/dev
       
       {
         //Search bar on navbar
           <div>
-<<<<<<< HEAD
             <input placeholder="Sök" />
-=======
-          <input
-            placeholder="Golden Horse 🔍"
-           value={value}
-            onChange={handleChange} />
->>>>>>> origin/dev
           </div>
         }
   </div>
   )
 }
 
-<<<<<<< HEAD
 export default Header;
-=======
-export default Header;
->>>>>>> origin/dev

@@ -48,7 +48,6 @@ export default function App() {
     })();
   }, []);
 
-<<<<<<< HEAD
   return s.products.length ? <Router>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -61,22 +60,5 @@ export default function App() {
       <Route path='/backoffice-camera' element={<BackofficeCamera />} />
     </Routes>
   </Router> : null;
-=======
-  return s.products.length ?
-
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product-list" element={<ProductList />} />
-        <Route path="/product-list2" element={<ProductList2 />} />
-        <Route path="/product-detail/:id" element={<ProductDetail />} />
-        <Route path="/product-edit/:id" element={<ProductEdit />} />
-        <Route path="/shopping-cart" element={<ShoppingCart />} />
-        <Route path='/backoffice-create' element={<BackofficeCreate />} />
-        <Route path='/backoffice-camera' element={<BackofficeCamera />} />
-        <Route path='/Backoffice' element={<Backoffice />} />
-      </Routes>
-    </Router> : null;
->>>>>>> origin/dev
 }
 
