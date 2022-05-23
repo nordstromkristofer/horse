@@ -34,6 +34,16 @@ export function add(productToAdd, quantityToAdd = 1) {
   }
   save();
 }
+export function remove(productDelete) {
+
+  let rowIndex = stateObject[stateProperty]
+    .findIndex(row => row.product.id === productDelete.id);
+  if (rowIndex >= 0) {
+    stateObject[stateProperty].splice(rowIndex, 1);
+  }
+ 
+  save();
+}
 
 export function empty() {
   stateObject[stateProperty] = [];

@@ -2,8 +2,7 @@ import React from 'react'
 
 const BackofficeCamera = () => {
   return (
-    <div>
-    </div>
+    <div>BackofficeCamera</div>
   )
 }
 
