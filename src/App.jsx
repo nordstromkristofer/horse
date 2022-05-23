@@ -19,6 +19,9 @@ import ShoppingCart from './ShoppingCart'
 import Home from './Home';
 import Backoffice from './Backoffice';
 import BackofficeCamera from './BackofficeCamera';
+import BackofficeCreate from './BackofficeCreate';
+
+
 
 // Create classes used for fetching from the REST-api
 const { Product, Categorie: Category } = factory;
@@ -29,8 +32,10 @@ export default function App() {
     products: [],
     categories: [],
     chosenCategoryId: 0,
-    cartContents: []
+    cartContents: [],
   });
+
+
 
   useEffect(() => {
     (async () => {
@@ -43,6 +48,7 @@ export default function App() {
       init(s, 'cartContents');
     })();
   }, []);
+
 
   return s.products.length ? <Router>
     <Routes>
@@ -58,3 +64,5 @@ export default function App() {
     </Routes>
   </Router> : null;
 }
+
+
