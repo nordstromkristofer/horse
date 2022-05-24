@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import axios from 'axios'
+
 
 const Create = () => {
-  axios.defaults.baseURL = "http://localhost:4000/api"
+
   const [horseData, setHorseData] = useState({
-    horseName: "",
-    horseDescription: "",
-    horsePrice: 0
-  })
+    categoryId: 1, // Do not hard code? Let the user choose?
+    name: "",
+    description: "",
+    price: 0
+  });
 
   const handleInputData = e => {
     setHorseData(data => ({
@@ -17,33 +18,27 @@ const Create = () => {
     }))
   }
 
-  const SubmitData = e => {
+  const SubmitData = async e => {
     e.preventDefault()
-    axios.post("/api/products", horseData)
-      .then(() => {
-        setHorseData({
-          horseName: "",
-          horseDescription: "",
-          horsePrice: ""
-        })
-
-      })
+    let result = await (await fetch('/api/products', {
+      method: "POST",
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(horseData)
+    })).json();
+    console.log(result)
   }
-
-
-
 
   return (
     <div>
       <Form onSubmit={SubmitData}>
         <label>Namn</label>
-        <input value={horseData.horseName} name="horseName" onChange={handleInputData} placeholder='Namn' />
+        <input value={horseData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
         <label>Beskrivning</label>
-        <input value={horseData.horseDescription} name="horseDescription" onChange={handleInputData} placeholder='Beskrivning' />
+        <input value={horseData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
 
         <label>Pris</label>
-        <input value={horseData.horsePrice} name="horsePrice" onChange={handleInputData} placeholder='Pris' />
+        <input value={horseData.price} name="price" onChange={handleInputData} placeholder='Pris' />
 
         <Button type='submit'>OK</Button>
       </Form>
