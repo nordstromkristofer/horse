@@ -12,8 +12,8 @@ import './utilities/scrollBehavior';
 
 import ProductList from './ProductLists';
 import ProductList2 from './ProductLists';
-import ProductDetail from './ProductDetail';
-import ProductDetail2 from './ProductDetail2';
+import ProductDetail1 from './ProductDetails';
+import ProductDetail2 from './ProductDetails';
 import ProductEdit from './ProductEdit';
 import ShoppingCart from './ShoppingCart'
 import Home from './Home';
@@ -54,7 +54,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/product-list" element={<ProductList />} />
       <Route path="/product-list2" element={<ProductList2 />} />
-      <Route path="/product-detail/:id" element={<ProductDetail />} />
+      <Route path="/product-detail1/:id" element={<ProductDetail1 />} />
       <Route path="/product-detail2/:id" element={<ProductDetail2 />} />
       <Route path="/product-edit/:id" element={<ProductEdit />} />
       <Route path="/shopping-cart" element={<ShoppingCart />} />
