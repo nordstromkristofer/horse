@@ -16,15 +16,6 @@ return (
         <img src={Logo} alt='Logo Image' style={{ width: '50px' }} />
         </div>
         
-        {/* Search Bar */}
-
-        <div className='flex justify-end'>
-            <input
-                placeholder="Golden Horse 🔍"
-                onChange={handleChange} />
-        </div>
-
-
       {/* menu */}
     
     <ul className='hidden md:flex'>
@@ -53,7 +44,24 @@ return (
             Contact
         </Link>
         </li>
-    </ul>
+        </ul>
+        
+                {/* Search Bar */}
+
+        <form class="rounded-md items-center flex divide-x">
+          <select class="rounded-l-md  py-4">
+            <option selected="selected">All Category</option>
+            <option>Horses</option>
+            <option>Equipment</option>
+            <option>Edibles</option>
+          </select>
+          <input class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25" name="search" placeholder="Search Products ....." type="search"/>
+          <button class="py-3 px-2 bg-yellow-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-8 text-gray-50 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </form>
 
       {/* Hamburger */}
     
