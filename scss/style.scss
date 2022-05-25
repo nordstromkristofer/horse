@@ -1,23 +1,30 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  margin: 40px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap%27');
 
-.product {
-  cursor: pointer;
-  margin-bottom: 40px;
-}
 
-h1 {
-  margin-bottom: 40px;
-}
+  @layer base {
+    body {
+      @apply font-[Raleway];
+    }
 
-.card h3 {
-  margin-top: 20px;
-}
+    li {
+      @apply px-4;
+      @apply cursor-pointer
+    }
+  }
 
-input,
-label {
-  width: 100%;
-}
+  .content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+  }
+
+  .content-div:hover {
+    background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0.8),
+      hsla(0, 0%, 100%, 0.8)) !important;
+  }

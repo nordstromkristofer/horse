@@ -1,14 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "../scss/style.scss";
-import App from './App';
-import Header from './Header';
+import App from "./App";
+import "./index.css";
 
-
-
-ReactDOM.createRoot(document.querySelector('#root')).render(
+ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
-    <Header />
     <App />
   </React.StrictMode>
 );
