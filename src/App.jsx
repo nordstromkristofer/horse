@@ -31,6 +31,7 @@ export default function App() {
     categories: [],
     chosenCategoryId: 0,
     cartContents: [],
+    filterProducts:[]
     
     
   });

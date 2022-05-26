@@ -1,15 +1,37 @@
 import React from 'react';
+import { useStates } from './utilities/states';
 
 
 
-function handleChange() {
-<<<<<<< HEAD
+function Header ({ handleChange, data }) {
+  const [filteredData, setFilterdData] = useStates([]);
+  const [wordEntered, setWordEntered] = useStates("");
   console.log(handleChange);
+
+
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((data) => {
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+    
+  }
+  if (searchWord === "") {
+    setFilterdData([]);
+  } else {
+    setFilterdData(newFilter);
 }
-=======
-  console.log(handleChange); 
-      }
->>>>>>> 6d50c47bcb78109e2822d4b41da914348dad5ac5
+};
+const clearInput = () => {
+  setFilterdData([]);
+  setWordEntered("");
+};
+
+
+
+
+
 const Header = () => {
 
 
@@ -25,24 +47,39 @@ const Header = () => {
 
 
 
-      {
+      
         //Search bar on navbar
         <div>
+
+
+          <div className="search">
+      <div className="searchInputs">
           <input
+            type="text"
             placeholder="Golden Horse 🔍"
-<<<<<<< HEAD
-            onChange={handleChange} />
+            value={wordEntered}
+              onChange={handleFilter}
+            />
+            </div>
+            </div>
+       
+       <div className="searchIcon">
+                {filteredData.length === 0 ? (
+                  < Section />
+                ) : (
+                  <CloseIcon id="clearbtn" onClick={clearInput}
+                  />
+          )}
+          
+
+                </div>
         </div>
-      }
-    </div>
-=======
-           
-            onChange={handleChange}  />
-          </div>
-        }
-  </div>
->>>>>>> 6d50c47bcb78109e2822d4b41da914348dad5ac5
-  )
-}
+      </div>
+    
+                );
+                
+
+    }
+
 
 export default Header;
