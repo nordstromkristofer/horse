@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
 import { Link } from "react-scroll";
+import { Outlet } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
       <ul className="hidden md:flex">
         <li>
           <Link to="/" smooth={true} duration={500}>
-            Hem
+            Stallet
           </Link>
         </li>
         <li>
@@ -30,18 +31,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} duration={500}>
-            Uttrostning
-          </Link>
-        </li>
-        <li>
-          <Link to="work" smooth={true} duration={500}>
-            Support
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" smooth={true} duration={500}>
-            Kontakt
+          <Link to="/shopping-cart" smooth={true} duration={500}>
+            Varukorg
           </Link>
         </li>
       </ul>
@@ -60,6 +51,7 @@ const Navbar = () => {
           name="search"
           placeholder="Search Products ....."
           type="search"
+          onChange={handleChange}
         />
         <button class="py-3 px-2 bg-yellow-400">
           <svg
@@ -70,9 +62,9 @@ const Navbar = () => {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
@@ -95,35 +87,34 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-            Hem
+          <Link onClick={handleClick} to="/" smooth={true} duration={500}>
+            Stallet
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+          <Link
+            onClick={handleClick}
+            to="/product-list"
+            smooth={true}
+            duration={500}
+          >
             Häster
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-            Uttrostning
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          {" "}
-          <Link onClick={handleClick} to="work" smooth={true} duration={500}>
-            Support
-          </Link>
-        </li>
-        <li className="py-6 text-4xl">
-          {" "}
-          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-            Kontakt
+          <Link
+            onClick={handleClick}
+            to="/shopping-cart"
+            smooth={true}
+            duration={500}
+          >
+            Varukorg
           </Link>
         </li>
       </ul>
+      <Outlet />
     </div>
   );
 };
