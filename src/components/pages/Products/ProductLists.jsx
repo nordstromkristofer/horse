@@ -5,6 +5,7 @@ import { scrollRestore } from "../../../utilities/scrollBehavior";
 import CategorySelect from "../CategorySelect";
 import { sweFormat } from "../../../utilities/currencyFormatter";
 
+
 export function ProductList() {
   scrollRestore();
 
@@ -13,6 +14,10 @@ export function ProductList() {
 
   function showDetail(id) {
     navigate(`/product-detail/${id}`);
+  }
+
+  function missingImage (event) {
+    
   }
 
   return (
@@ -38,13 +43,14 @@ export function ProductList() {
             <Card>
               <Col xxl="12">
                 <h3>{name}</h3>
+                <img onError={ missingImage} className="float-end w-25" src={`/images/horses/${id}.jpg`} /> 
               </Col>
               <Col xxl="12">
                 <p>{description}</p>
               </Col>
               <Col xxl="12">
                 <p>
-                  <b>Price:</b> {sweFormat(price)}
+                  <b>Pris:</b> {sweFormat(price)}
                 </p>
               </Col>
             </Card>
@@ -74,8 +80,8 @@ export default function ProductList2() {
       {s.products
         .filter(
           (product) =>
-            (s.chosenCategoryId === 0 / all / s.chosenCategoryId) ===
-            product.categoryId
+            (s.chosenCategoryId === 0 || /*all*/
+              s.chosenCategoryId) === product.categoryId
         )
         .map(({ id, name }) => (
           <Row className="product" key={id} onClick={() => showDetail(id)}>

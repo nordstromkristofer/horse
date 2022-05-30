@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { add } from "../../../utilities/shoppingCartLogic";
 import { sweFormat } from "../../../utilities/currencyFormatter";
 
-export default function ProductDetail1() {
+export default function ProductDetails() {
   let s = useStates("main");
 
   // Find the product
@@ -131,6 +131,7 @@ export function ProductDetail2() {
       </Row>
       <Row>
         <Col>
+          <img className="float-end w-25 ms-3" src={`/images/horses/${id}.jpg`} />
           <p>{description}</p>
         </Col>
       </Row>
