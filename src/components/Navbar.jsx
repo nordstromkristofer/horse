@@ -12,10 +12,10 @@ const Navbar = () => {
   }
   const filter = (e) => {
     const keyword = e.target.value;
-  
-    if (keyword !== '') {
+
+    if (keyword !== "") {
       const results = Horses.filter((horse) => {
-        return
+        return;
         user.horse.toLoweCase().startWith(keyword.toLowerCase());
       });
       setFoundHorses(results);
@@ -25,14 +25,13 @@ const Navbar = () => {
     setName(keyword);
   };
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
+    <div className="navbar navbar-expand-lg  w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
         <img src={Logo} alt="Logo Image" style={{ width: "50px" }} />
       </div>
 
       {/* menu */}
-      
-      
+
       <ul className="hidden md:flex">
         <li>
           <Link to="/" smooth={true} duration={500}>
@@ -40,7 +39,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/product-list" activeClass="active"  smooth={true} duration={500}>
+          <Link
+            to="/product-list"
+            activeClass="active"
+            smooth={true}
+            duration={500}
+          >
             Hästar
           </Link>
         </li>
@@ -49,8 +53,7 @@ const Navbar = () => {
             Varukorg
           </Link>
         </li>
-        </ul>
-      
+      </ul>
 
       {/* Search Bar */}
 
@@ -68,7 +71,7 @@ const Navbar = () => {
           type="search"
           onChange={handleChange}
         />
-       
+
         <button class="py-3 px-2 bg-yellow-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
