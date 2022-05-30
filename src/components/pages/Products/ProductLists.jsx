@@ -5,7 +5,7 @@ import { scrollRestore } from "../../../utilities/scrollBehavior";
 import CategorySelect from "../CategorySelect";
 import { sweFormat } from "../../../utilities/currencyFormatter";
 
-export default function ProductList() {
+export default function ProductLists() {
   scrollRestore();
 
   let s = useStates("main");
