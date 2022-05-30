@@ -22,16 +22,18 @@ export default function ProductList() {
 
   return (
     <Container className="pt-40 ">
-      <Row>
-        <Col>
-          <h1>Products</h1>
-        </Col>
-      </Row>
-      <Row className="mb-3">
-        <Col>
-          <CategorySelect showAllOption bindTo={[s, "chosenCategoryId"]} />
-        </Col>
-      </Row>
+      <div className="flex justify-center">
+        <Row>
+          <Col>
+            <h1 className="text-xl font-bold mb-3">Products</h1>
+          </Col>
+        </Row>
+        <Row className="mb-3 ml-3">
+          <Col>
+            <CategorySelect showAllOption bindTo={[s, "chosenCategoryId"]} />
+          </Col>
+        </Row>
+      </div>
       <div className="">
         {s.products
           .filter(
