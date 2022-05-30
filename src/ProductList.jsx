@@ -12,10 +12,13 @@ export default function ProductList() {
   let s = useStates('main');
   let navigate = useNavigate();
 
-  function showDetail(id) {
-    navigate(`/product-detail/${id}`);
+  function search(product) {
+    return product.name.toLowerCase().includes(searchTerm.toLowerCase())
+      || product.description.toLowerCase().includes(searchTerm.toLowerCase());
   }
- 
+
+  <input className="search_input" type="text" placeholder='Search' value={searchTerm} onChange={event => setSearchTerm(event.target.value)} />
+
   return <Container className="productList">
     <Row><Col><h1>Products</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
@@ -32,7 +35,7 @@ export default function ProductList() {
             <p>{description}</p>
           </Col>
           <Col xxl="12">
-            <p><b>Price:</b> {sweFormat(price)} 
+            <p><b>Price:</b> {sweFormat(price)}
             </p>
           </Col>
         </Card>
