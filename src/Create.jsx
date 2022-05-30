@@ -31,6 +31,9 @@ const Create = () => {
   return (
     <div>
       <Form onSubmit={SubmitData}>
+
+        <select></select>
+
         <label>Namn</label>
         <input value={horseData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
