@@ -3,8 +3,13 @@ import React from 'react';
 
 
 function handleChange() {
+<<<<<<< HEAD
   console.log(handleChange);
 }
+=======
+  console.log(handleChange); 
+      }
+>>>>>>> 6d50c47bcb78109e2822d4b41da914348dad5ac5
 const Header = () => {
 
 
@@ -25,10 +30,18 @@ const Header = () => {
         <div>
           <input
             placeholder="Golden Horse 🔍"
+<<<<<<< HEAD
             onChange={handleChange} />
         </div>
       }
     </div>
+=======
+           
+            onChange={handleChange}  />
+          </div>
+        }
+  </div>
+>>>>>>> 6d50c47bcb78109e2822d4b41da914348dad5ac5
   )
 }
 
