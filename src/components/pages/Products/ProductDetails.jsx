@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { add } from "../../../utilities/shoppingCartLogic";
 import { sweFormat } from "../../../utilities/currencyFormatter";
 
-export default function ProductDetail1() {
+export default function ProductDetails() {
   let s = useStates("main");
 
   // Find the product
@@ -48,7 +48,7 @@ export default function ProductDetail1() {
       </Row>
       <Row className="mb-3">
         <Col>
-          <h4>Category: {categoryName}</h4>
+          <h4>Kategorie: {categoryName}</h4>
         </Col>
       </Row>
       <Row>
@@ -58,7 +58,7 @@ export default function ProductDetail1() {
       </Row>
       <Row>
         <Col>
-          <p>Price: {sweFormat(price)} </p>
+          <p>Pris: {sweFormat(price)} </p>
         </Col>
       </Row>
       <Row>
@@ -74,7 +74,7 @@ export default function ProductDetail1() {
               onClick={buy}
               className="mt-2 btn btn-primary float-end"
             >
-              Buy
+              Köp
             </button>
           </label>
         </Col>
@@ -131,6 +131,7 @@ export function ProductDetail2() {
       </Row>
       <Row>
         <Col>
+          <img className="float-end w-25 ms-3" src={`/images/horses/${id}.jpg`} />
           <p>{description}</p>
         </Col>
       </Row>

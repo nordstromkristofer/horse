@@ -18,6 +18,10 @@ export default function ProductLists() {
     navigate(`/product-detail/${id}`);
   }
 
+  function missingImage (event) {
+    
+  }
+
   return (
     // <Test />
     <Container className="productList">
@@ -42,13 +46,14 @@ export default function ProductLists() {
             <Card>
               <Col xxl="12">
                 <h3>{name}</h3>
+                <img onError={ missingImage} className="float-end w-25" src={`/images/horses/${id}.jpg`} /> 
               </Col>
               <Col xxl="12">
                 <p>{description}</p>
               </Col>
               <Col xxl="12">
                 <p>
-                  <b>Price:</b> {sweFormat(price)}
+                  <b>Pris:</b> {sweFormat(price)}
                 </p>
               </Col>
             </Card>

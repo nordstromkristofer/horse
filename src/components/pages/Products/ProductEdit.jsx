@@ -36,13 +36,13 @@ export default function ProductDetail() {
       </Row>
       <Row>
         <Col>
-          <p>Price: {sweFormat(price)} </p>
+          <p>Pris: {sweFormat(price)} </p>
         </Col>
       </Row>
       <Row>
         <Col>
           <label className="mt-3">
-            Name:
+            Namn:
             <input className="form-control" {...product.bind("name")} />
           </label>
         </Col>
@@ -50,7 +50,7 @@ export default function ProductDetail() {
       <Row>
         <Col>
           <label className="mt-3">
-            Description:
+            Beskrivning:
             <textarea
               className="form-control"
               {...product.bind("description")}
@@ -61,7 +61,7 @@ export default function ProductDetail() {
       <Row>
         <Col>
           <label className="mt-3">
-            Price:
+            Pris:
             <input
               type="number"
               className="form-control"
@@ -73,7 +73,7 @@ export default function ProductDetail() {
       <Row className="mt-4">
         <Col>
           <label>
-            Category:&nbsp;
+            Kategorie:&nbsp;
             <CategorySelect bindTo={[product, "categoryId"]} />
           </label>
         </Col>
@@ -83,7 +83,7 @@ export default function ProductDetail() {
         onClick={save}
         className="my-4 btn btn-primary float-end"
       >
-        Save
+        Spara
       </button>
     </Container>
   );

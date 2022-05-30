@@ -8,7 +8,7 @@ const Navbar = () => {
   function handleChange() {
     console.log(handleChange);
   }
-
+  
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
@@ -16,7 +16,8 @@ const Navbar = () => {
       </div>
 
       {/* menu */}
-
+      
+      
       <ul className="hidden md:flex">
         <li>
           <Link to="/" smooth={true} duration={500}>
@@ -24,8 +25,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/product-list" smooth={true} duration={500}>
-            Häster
+          <Link to="/product-list" activeClass="active"  smooth={true} duration={500}>
+            Hästar
           </Link>
         </li>
         <li>
@@ -33,24 +34,26 @@ const Navbar = () => {
             Varukorg
           </Link>
         </li>
-      </ul>
+        </ul>
+      
 
       {/* Search Bar */}
 
       <form class="rounded-md items-center flex divide-x">
         <select class="rounded-l-md  py-4">
-          <option selected="selected">All Category</option>
-          <option>Horses</option>
-          <option>Equipment</option>
-          <option>Edibles</option>
+          <option selected="selected">Kategorier</option>
+          <option>Hästar</option>
+          <option>Utrustning</option>
+          <option>Foder</option>
         </select>
         <input
           class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25"
           name="search"
-          placeholder="Search Products ....."
+          placeholder="Sök ....."
           type="search"
           onChange={handleChange}
         />
+       
         <button class="py-3 px-2 bg-yellow-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +99,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
           >
-            Häster
+            Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">
