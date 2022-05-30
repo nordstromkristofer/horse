@@ -10,20 +10,7 @@ const Navbar = () => {
   function handleChange() {
     console.log(handleChange);
   }
-  const filter = (e) => {
-    const keyword = e.target.value;
   
-    if (keyword !== '') {
-      const results = Horses.filter((horse) => {
-        return
-        user.horse.toLoweCase().startWith(keyword.toLowerCase());
-      });
-      setFoundHorses(results);
-    } else {
-      setFoundHorses(Horses);
-    }
-    setName(keyword);
-  };
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
@@ -59,7 +46,7 @@ const Navbar = () => {
           <option selected="selected">Kategorier</option>
           <option>Hästar</option>
           <option>Utrustning</option>
-          <option>Edibles</option>
+          <option>Foder</option>
         </select>
         <input
           class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25"
@@ -115,7 +102,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
           >
-            Häster
+            Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">

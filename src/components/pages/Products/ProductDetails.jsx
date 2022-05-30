@@ -48,7 +48,7 @@ export default function ProductDetails() {
       </Row>
       <Row className="mb-3">
         <Col>
-          <h4>Category: {categoryName}</h4>
+          <h4>Kategorie: {categoryName}</h4>
         </Col>
       </Row>
       <Row>
@@ -58,7 +58,7 @@ export default function ProductDetails() {
       </Row>
       <Row>
         <Col>
-          <p>Price: {sweFormat(price)} </p>
+          <p>Pris: {sweFormat(price)} </p>
         </Col>
       </Row>
       <Row>
@@ -74,7 +74,7 @@ export default function ProductDetails() {
               onClick={buy}
               className="mt-2 btn btn-primary float-end"
             >
-              Buy
+              Köp
             </button>
           </label>
         </Col>
