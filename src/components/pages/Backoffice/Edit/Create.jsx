@@ -32,7 +32,7 @@ const Create = () => {
     <div className="flex justify-center">
       <Form
         onSubmit={SubmitData}
-        className="w-full md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-10 m-5"
+        className="w-full md:flex-row md:max-w-xl rounded-lg bg-white shadow p-10 m-5"
       >
         <div className="form-group mb-6">
           <label className="form-label inline-block mb-2 text-gray-700 text-xl">
