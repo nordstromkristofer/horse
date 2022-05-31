@@ -13,7 +13,8 @@ import ShoppingCart from "./components/pages/ShoppingCart";
 import Home from "./components/pages/Home";
 import Backoffice from "./components/pages/Backoffice/Backoffice";
 import BackofficeCamera from "./components/pages/Backoffice/BackofficeCamera";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Create classes used for fetching from the REST-api
 const { Product, Categories: Category } = factory;
@@ -42,6 +43,7 @@ export default function App() {
 
   return s.products.length ? (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product-list" element={<ProductList />} />
@@ -53,6 +55,7 @@ export default function App() {
         <Route path="/backoffice" element={<Backoffice />} />
         <Route path="/backoffice-camera" element={<BackofficeCamera />} />
       </Routes>
+      <Footer />
     </Router>
   ) : null;
 }

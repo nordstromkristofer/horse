@@ -8,8 +8,8 @@ import Footer from "./components/Footer";
 
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
-    <Navbar />
+    {/* <Navbar /> */}
     <App />
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>
 );
