@@ -1,6 +1,5 @@
 import React from "react";
 import horseVideo from "../../assets/Hero.mp4";
-import { HiArrowNarrowRight } from "react-icons/hi";
 
 const HeroVid = () => {
   return (

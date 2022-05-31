@@ -2,11 +2,14 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import HeroVid from "./HeroVid";
 import Navbar from "../Navbar";
+import Header from "../Header";
 
 const Home = () => {
   return (
     <div className="">
-      <HeroVid className="static" />
+      <Header />
+
+      {/* <HeroVid className="static" />
       <div className="absolute backdrop-blur-md bg-white/30 top-20 left-80 w-1/3 h-92">
         <h1 className="px-10 pt-10 pb-5 text-5xl">
           Endast Den Bästa Kvaliteten För Dig!
@@ -23,7 +26,7 @@ const Home = () => {
             </span>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
