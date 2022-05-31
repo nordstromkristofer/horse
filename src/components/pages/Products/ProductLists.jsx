@@ -12,9 +12,6 @@ export default function ProductList() {
   let navigate = useNavigate();
 
   function showDetail(id) {
-    // console.log("calling the navigate");
-    // console.log(navigate("/product-list"));
-
     navigate(`/product-detail/${id}`);
   }
 
@@ -43,7 +40,7 @@ export default function ProductList() {
           )
           .map(({ id, name, description, price }) => (
             <Row
-              className="flex flex-wrap justify-around h-100 justify-items-stretch p-5 w-2/7"
+              className="flex flex-col flex-wrap justify-around h-100 justify-items-stretch p-5 w-2/7"
               key={id}
               onClick={() => showDetail(id)}
             >
