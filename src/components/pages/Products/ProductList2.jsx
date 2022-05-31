@@ -16,7 +16,7 @@ export default function ProductList2() {
 
   return (
     <Container className=" flex justify-center ">
-      <div className="w-full md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-10 m-5">
+      <div className="w-full md:flex-row md:max-w-xl rounded-lg bg-white shadow p-10 m-5">
         <Row className="">
           <Col>
             <CategorySelect showAllOption bindTo={[s, "chosenCategoryId"]} />
@@ -32,7 +32,7 @@ export default function ProductList2() {
             <button
               aria-current="true"
               type="button"
-              className="text-left px-6 py-2 border-b border-gray-300 w-full bg-[#F4EBD0] text-gray-900 cursor-pointer"
+              className="text-left my-1 px-6 py-2 border-b border-gray-300 w-full bg-[#F4EBD0] text-gray-900 cursor-pointer"
               key={id}
               onClick={() => showDetail(id)}
             >
