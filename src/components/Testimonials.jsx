@@ -4,8 +4,8 @@ import { BiSupport } from "react-icons/bi";
 
 const Testimonials = () => {
   return (
-    <div className="container my-8 px-6 mx-auto">
-      <section className="mb-32 text-gray-800">
+    <div className="container my-0 px-6 mx-auto">
+      <section className="mb-0 text-gray-800">
         <div className="relative overflow-hidden bg-no-repeat bg-cover"></div>
         <div className="container text-gray-800 px-4 md:px-12">
           <div className="block rounded-lg py-10 md:py-12 px-4 md:px-6">

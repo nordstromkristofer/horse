@@ -6,12 +6,14 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
+import ProductGallery from "./components/ProductGallery";
 
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
     <Navbar />
     <App />
     <Testimonials />
+    <ProductGallery />
     <Footer />
   </React.StrictMode>
 );
