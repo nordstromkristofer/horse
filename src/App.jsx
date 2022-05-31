@@ -7,7 +7,7 @@ import "./utilities/scrollBehavior";
 import ProductList from "./components/pages/Products/ProductLists";
 import ProductList2 from "./components/pages/Products/ProductList2";
 import ProductDetail from "./components/pages/Products/ProductDetails";
-import ProductDetail2 from "./components/pages/Products/ProductDetails";
+import ProductDetail2 from "./components/pages/Products/ProductDetail2";
 import ProductEdit from "./components/pages/Products/ProductEdit";
 import ShoppingCart from "./components/pages/ShoppingCart";
 import Home from "./components/pages/Home";
@@ -32,8 +32,8 @@ export default function App() {
       s.categories = await Category.find();
       // get the products from the db
       s.products = await Product.find();
-      
-      console.log('/product-list')
+
+      console.log("/product-list");
       // initilize the shopping cart
       // (this provides local storage of cartContents)
       init(s, "cartContents");
