@@ -19,7 +19,7 @@ export default function ProductDetail() {
     // Save to db
     await product.save();
     // Navigate to detail page
-    navigate(`/product-detail/${id}`);
+    navigate(`/backoffice`);
   }
 
   return (

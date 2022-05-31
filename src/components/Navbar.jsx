@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
 import { Outlet, Link } from "react-router-dom";
 
@@ -61,7 +60,7 @@ const Navbar = () => {
           <option selected="selected">Kategorier</option>
           <option>Hästar</option>
           <option>Utrustning</option>
-          <option>Edibles</option>
+          <option>Foder</option>
         </select>
         <input
           class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25"
@@ -91,9 +90,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
 
-      <div onClick={handleClick} className="md:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
+      <div onClick={handleClick} className="md:hidden z-10"></div>
 
       {/* Mobile menu */}
 
@@ -117,7 +114,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
           >
-            Häster
+            Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">
