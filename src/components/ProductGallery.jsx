@@ -14,7 +14,7 @@ const ProductGallery = () => {
             <div class="relative overflow-hidden bg-no-repeat bg-cover">
               <img
                 src="https://ichef.bbci.co.uk/news/976/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg"
-                class="w-full rounded-t-lg"
+                class="w-full h-44 rounded-t-lg"
               />
               <a href="#!">
                 <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
@@ -43,7 +43,7 @@ const ProductGallery = () => {
             >
               <img
                 src="https://media.istockphoto.com/photos/horse-with-tongue-stuck-out-picture-id1192159893?k=20&m=1192159893&s=612x612&w=0&h=qM07QSReiRRsRNGyAkh9Y_nljw97_nUmyxVCuIk8i8Y="
-                class="w-full rounded-t-lg"
+                class="w-full h-44 rounded-t-lg"
               />
               <a href="#!">
                 <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
@@ -72,7 +72,7 @@ const ProductGallery = () => {
             >
               <img
                 src="https://www.heyiceland.is/asset/27235/beautiful-brown-icelandic-horse"
-                class="w-full rounded-t-lg"
+                class="w-full h-44 rounded-t-lg"
               />
               <a href="#!">
                 <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"></div>
