@@ -100,7 +100,7 @@ const Footer = () => {
           </li>
         </div>
       </div>
-      <div class="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center">
+      <div class="mt-4 pt-6 text-gray-600 border-t border-gray-800 text-center">
         {" "}
         © 2022 Golden Horse. All rights reserved.
       </div>
