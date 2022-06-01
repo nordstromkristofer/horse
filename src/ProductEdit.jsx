@@ -9,40 +9,40 @@ export default function ProductDetail() {
   let { id } = useParams();
   let navigate = useNavigate();
 
-  let product = s.products.find(x => x.id === +id);
-  if (!product) { return null; }
-  let { name, description, price } = product;
+  let hästar = s.hästar.find(x => x.id === +id);
+  if (!hästar) { return null; }
+  let { namn, beskrivning, gård } = hästar;
 
   async function save() {
     // Save to db
-    await product.save();
+    await hästar.save();
     // Navigate to detail page
     navigate(`/product-detail/${id}`);
   }
 
   return <Container className="productList">
-    <Row><Col><h1>{name}</h1></Col></Row>
-    <Row><Col><p>{description}</p></Col></Row>
-    <Row><Col><p>Price: {price} SEK</p></Col></Row>
+    <Row><Col><h1>{namn}</h1></Col></Row>
+    <Row><Col><p>{beskrivning}</p></Col></Row>
+    <Row><Col><p>{gård} </p></Col></Row>
     <Row><Col>
-      <label className="mt-3">Name:
-        <input className="form-control" {...product.bind('name')} />
+      <label className="mt-3">Namn:
+        <input className="form-control" {...hästar.bind('namn')} />
       </label>
     </Col></Row>
     <Row><Col>
-      <label className="mt-3">Description:
-        <textarea className="form-control" {...product.bind('description')} />
+      <label className="mt-3">Beskrivning:
+        <textarea className="form-control" {...hästar.bind('beskrivning')} />
       </label>
     </Col></Row>
     <Row><Col>
-      <label className="mt-3">Price:
-        <input type="number" className="form-control" {...product.bind('price')} />
+      <label className="mt-3">Gård:
+        <input type="number" className="form-control" {...hästar.bind('beskrivning')} />
       </label>
     </Col></Row>
     <Row className="mt-4"><Col>
       <label>
-        Category:&nbsp;
-        <CategorySelect bindTo={[product, 'categoryId']} />
+        Kategori:&nbsp;
+        <CategorySelect bindTo={[product, 'Kategoriid']} />
       </label>
     </Col></Row>
     <button type="button" onClick={save} className="my-4 btn btn-primary float-end">Save</button>

@@ -9,17 +9,16 @@ export default function ProductDetail() {
 
   // Find the product
   let { id } = useParams();
-  let product = s.products.find(x => x.id === +id);
-  if (!product) { return null; }
+  let hästar = s.hästar.find(x => x.id === +id);
+  if (!hästar) { return null; }
 
-  let { name, description, price, categoryId } = product;
 
 
 
   // Find the category
-  let categoryName = s.categories.find(category =>
-    category.id === categoryId
-  )?.name || 'none';
+  let kategorinamn = s.kategorier.find(category =>
+    kategorier.id === kategoriid
+  )?.namn || 'none';
 
   let navigate = useNavigate();
 
@@ -37,10 +36,10 @@ export default function ProductDetail() {
         <hr />
       </Link>
     </Col></Row>
-    <Row><Col><h1 className="mb-2">{name}</h1></Col></Row>
-    <Row className="mb-3"><Col><h4>Category: {categoryName}</h4></Col></Row>
-    <Row><Col><p>{description}</p></Col></Row>
-    <Row><Col><p>Price: {price} SEK</p></Col></Row>
+    <Row><Col><h1 className="mb-2">{namn}</h1></Col></Row>
+    <Row className="mb-3"><Col><h4>Kategori: {kategorinamn}</h4></Col></Row>
+    <Row><Col><p>{besrivning}</p></Col></Row>
+    <Row><Col><p>Gård: {gård} </p></Col></Row>
     <Row><Col>
       <Link to={`/product-edit/${id}`}>
         <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
@@ -48,12 +47,12 @@ export default function ProductDetail() {
     </Col></Row>
     <Row><Col>
 
-  <label>
-  Antal
-    <input type="text" name="antal" placeholder='1' />
-    <button type="button" onClick={buy} className="mt-2 btn btn-primary float-end">Buy</button>
-  </label>
-     
+      <label>
+        Antal
+        <input type="text" namn="antal" placeholder='1' />
+        <button type="button" onClick={buy} className="mt-2 btn btn-primary float-end">Buy</button>
+      </label>
+
     </Col></Row>
   </Container>
 }
