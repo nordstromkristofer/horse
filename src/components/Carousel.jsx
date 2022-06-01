@@ -17,7 +17,7 @@ const Carousel = () => {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider className="px-5" {...settings}>
       <div className="relative w-full">
         <img src={Carousel1} className="block w-full" alt="Carousel1" />
         <div className="">
