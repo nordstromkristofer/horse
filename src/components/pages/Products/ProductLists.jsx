@@ -18,20 +18,8 @@ export default function ProductList() {
   function missingImage(event) {}
 
   return (
-    <Container className="pt-40 ">
-      <div className="flex justify-center">
-        <Row>
-          <Col>
-            <h1 className="text-xl font-bold mb-3">Products</h1>
-          </Col>
-        </Row>
-        <Row className="mb-3 ml-3">
-          <Col>
-            <CategorySelect showAllOption bindTo={[s, "chosenCategoryId"]} />
-          </Col>
-        </Row>
-      </div>
-      <div className="">
+    <div className="container my-0 px-6 mx-auto">
+      <div class="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12 pt-80">
         {s.products
           .filter(
             (product) =>
@@ -39,39 +27,39 @@ export default function ProductList() {
               s.chosenCategoryId === product.categoryId
           )
           .map(({ id, name, description, price }) => (
-            <Row
-              className="flex flex-col flex-wrap justify-around h-100 justify-items-stretch p-5 w-2/7"
+            <div
+              className="mb-32 text-gray-800 text-center lg:text-left"
               key={id}
               onClick={() => showDetail(id)}
             >
-              <Card className="shadow-lg max-w-sm p-10 bg-gray-100 rounded-lg dark:border-gray-700 hover:bg-gray-300 transition-color duration-200 transform transition-all hover:scale-110">
-                <Col className="justify w-1/7" xxl="12">
+              <div className="shadow-lg max-w-sm p-10 bg-gray-100 rounded-lg dark:border-gray-700 hover:bg-gray-300 transition-color duration-200 transform transition-all hover:scale-110">
+                <div className="relative overflow-hidden bg-no-repeat bg-cover">
                   <img
                     onError={missingImage}
-                    className="rounded-t-lg"
+                    className="w-full h-44 rounded-t-lg"
                     src={`/images/horses/${id}.jpg`}
                   />
                   <h5 className="text-gray-900 text-xl font-medium mb-2">
                     {name}
                   </h5>
-                </Col>
-                <Col className="text-gray-700 text-base mb-4" xxl="12">
+                </div>
+                <div className="text-gray-700 text-base mb-4">
                   <p>{description.slice(0, 50)} ...</p>
-                </Col>
-                <Col xxl="12">
+                </div>
+                <div>
                   <p>
                     <b>Pris:</b> {sweFormat(price)}
                   </p>
-                </Col>
-                <Col>
+                </div>
+                <div>
                   <button className="inline-block text-xs leading-tight uppercase hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold m-2 py-2 px-4 border border-gray-400 rounded shadow">
                     Fler detaljer
                   </button>
-                </Col>
-              </Card>
-            </Row>
+                </div>
+              </div>
+            </div>
           ))}
       </div>
-    </Container>
+    </div>
   );
 }
