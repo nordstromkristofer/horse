@@ -109,7 +109,7 @@ const Navbar = () => {
         <li className="py-6 text-4xl">
           {" "}
           <Link onClick={handleClick} to="/product-list">
-            Häster
+            Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">
