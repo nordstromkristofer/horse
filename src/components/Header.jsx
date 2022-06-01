@@ -23,7 +23,7 @@ const Header = () => {
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
               >
-                Get started
+                Köp Nu!
               </button>
             </div>
           </div>
