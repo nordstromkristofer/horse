@@ -1,7 +1,9 @@
-import React from "react";
 import horseVid from "../assets/Hero.mp4";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const handleClick = () => setNav(!nav);
+
   return (
     <div className="w-full h-[90vh] top-[90px] mb-20">
       <video
@@ -22,13 +24,13 @@ const Header = () => {
           Allt i vår butik är valt från bästa kvalitet som passar din drömresa.
         </p>
         <div>
-          <button
+          <Link
             className="inline-block px-7 py-3 border-2 border-amber-400 text-white font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
+            onClick={handleClick}
+            to={`/product-list`}
           >
             Köp Nu!
-          </button>
+          </Link>
         </div>
       </div>
     </div>
