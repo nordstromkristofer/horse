@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
-import { Link } from "react-scroll";
-import { Outlet } from "react-router-dom";
+// import { Link } from "react-scroll";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -34,11 +34,11 @@ const Navbar = () => {
 
       <ul className="hidden md:flex">
         <li>
-          <Link to="/">Stallet</Link>
+          <Link to={`/`}>Stallet</Link>
         </li>
         <li>
           <Link
-            to="/product-list"
+            to={`/product-list`}
             activeClass="active"
             smooth={true}
             duration={500}
@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/shopping-cart">Varukorg</Link>
+          <Link to={`/shopping-cart`}>Varukorg</Link>
         </li>
       </ul>
 
@@ -102,19 +102,19 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="/">
+          <Link onClick={handleClick} to={`/`}>
             Stallet
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link onClick={handleClick} to="/product-list">
+          <Link onClick={handleClick} to={`/product-list`}>
             Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link onClick={handleClick} to="/shopping-cart">
+          <Link onClick={handleClick} to={`/shopping-cart`}>
             Varukorg
           </Link>
         </li>

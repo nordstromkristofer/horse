@@ -12,9 +12,6 @@ export default function ProductList() {
   let navigate = useNavigate();
 
   function showDetail(id) {
-    // console.log("calling the navigate");
-    // console.log(navigate("/product-list"));
-
     navigate(`/product-detail/${id}`);
   }
 
@@ -43,11 +40,11 @@ export default function ProductList() {
           )
           .map(({ id, name, description, price }) => (
             <Row
-              className="flex flex-wrap justify-around h-100 justify-items-stretch p-5 w-2/7"
+              className="flex flex-col flex-wrap justify-around h-100 justify-items-stretch p-5 w-2/7"
               key={id}
               onClick={() => showDetail(id)}
             >
-              <Card className="rounded-lg shadow-lg bg-white max-w-sm p-10 bg-gray-100 rounded-lg dark:border-gray-700 hover:bg-gray-300 transition-color duration-200 transform transition-all hover:scale-110">
+              <Card className="shadow-lg max-w-sm p-10 bg-gray-100 rounded-lg dark:border-gray-700 hover:bg-gray-300 transition-color duration-200 transform transition-all hover:scale-110">
                 <Col className="justify w-1/7" xxl="12">
                   <img
                     onError={missingImage}
@@ -67,7 +64,7 @@ export default function ProductList() {
                   </p>
                 </Col>
                 <Col>
-                  <button className="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold m-2 py-2 px-4 border border-gray-400 rounded shadow">
+                  <button className="inline-block text-xs leading-tight uppercase hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold m-2 py-2 px-4 border border-gray-400 rounded shadow">
                     Fler detaljer
                   </button>
                 </Col>

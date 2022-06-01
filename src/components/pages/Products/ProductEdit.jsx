@@ -19,72 +19,85 @@ export default function ProductDetail() {
     // Save to db
     await product.save();
     // Navigate to detail page
-    navigate(`/product-detail/${id}`);
+    navigate(`/product-detail2/${id}`);
   }
 
   return (
-    <Container className="productList">
-      <Row>
-        <Col>
-          <h1>{name}</h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <p>{description}</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <p>Price: {sweFormat(price)} </p>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <label className="mt-3">
-            Name:
-            <input className="form-control" {...product.bind("name")} />
-          </label>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <label className="mt-3">
-            Description:
-            <textarea
-              className="form-control"
-              {...product.bind("description")}
-            />
-          </label>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <label className="mt-3">
-            Price:
-            <input
-              type="number"
-              className="form-control"
-              {...product.bind("price")}
-            />
-          </label>
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col>
-          <label>
-            Category:&nbsp;
-            <CategorySelect bindTo={[product, "categoryId"]} />
-          </label>
-        </Col>
-      </Row>
-      <button
-        type="button"
-        onClick={save}
-        className="my-4 btn btn-primary float-end"
-      >
-        Save
-      </button>
-    </Container>
+    <div className="flex justify-center pt-20">
+      <Container className="md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-10 m-5">
+        <Row>
+          <Col>
+            <h2 className="text-gray-900 text-xl font-medium mb-2">
+              <b>Namn: </b>
+              {name}
+            </h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="text-gray-700 text-base mb-4">
+              <b>Beskrivning:</b> {description}
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="text-gray-700 text-base mb-4">
+              <b>Pris: </b>
+              {sweFormat(price)}{" "}
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <label className="form-label w-full inline-block mb-2 text-gray-700">
+              Namn:
+              <input
+                className="form-control block w-full  px-3  py-1.5  text-base  font-normal  text-gray-700  bg-white bg-clip-padding  border border-solid border-gray-300  rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                {...product.bind("name")}
+              />
+            </label>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <label className="form-label w-full inline-block mb-2 text-gray-700">
+              Beskrivning:
+              <textarea
+                className="form-control block w-full  px-3  py-1.5  text-base  font-normal  text-gray-700    bg-white bg-clip-padding  border border-solid border-gray-300  rounded  transition  ease-in-out  m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                {...product.bind("description")}
+              />
+            </label>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <label className="form-label w-full inline-block mb-2 text-gray-700">
+              Pris:
+              <input
+                type="number"
+                className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                {...product.bind("price")}
+              />
+            </label>
+          </Col>
+        </Row>
+        <Row className="mt-4">
+          <Col>
+            <label className="form-label inline-block mb-2 text-gray-700">
+              Kategorier:
+              <CategorySelect bindTo={[product, "categoryId"]} />
+            </label>
+          </Col>
+        </Row>
+        <button
+          type="button"
+          onClick={save}
+          className="px-6 py-1 my-2 bg-green-400 transition ease-in duration-200 uppercase hover:bg-green-800 hover:text-white border-2 border-gray-900 focus:outline-none"
+        >
+          Spara
+        </button>
+      </Container>
+    </div>
   );
 }
