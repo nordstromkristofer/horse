@@ -22,10 +22,10 @@ const Carousel = () => {
         <img src={Carousel1} className="block w-full" alt="Carousel1" />
         <div className="">
           <h5 className="absolute mx-4 top-10 text-xl text-neutral-600">
-            New Summer Collection
+            Ny Sommarkollektion
           </h5>
           <button className="absolute mx-4 top-20 bg-blue-500 text-white p-2 rounded hover:bg-blue-800">
-            Expore Now!
+            Utforska Nu!
           </button>
         </div>
       </div>
@@ -34,10 +34,10 @@ const Carousel = () => {
         <img src={Carousel2} className="block w-full" alt="Carousel2" />
         <div className="">
           <h5 className="absolute mx-4 top-10 text-xl text-neutral-600">
-            Let's Go For A Ride!
+            Gör Dig Redo Med Oss!
           </h5>
           <button className="absolute mx-4 top-20 bg-blue-500 text-white p-2 rounded hover:bg-blue-800">
-            Expore Now!
+            Utforska Nu!
           </button>
         </div>
       </div>
@@ -46,10 +46,10 @@ const Carousel = () => {
         <img src={Carousel3} className="block w-full" alt="Carousel3" />
         <div className="">
           <h5 className="absolute mx-4 top-10 text-xl text-neutral-600">
-            Optimum Protection For Your Horse
+            Optimalt Skydd För Din Häst!
           </h5>
           <button className="absolute mx-4 top-20 bg-blue-500 text-white p-2 rounded hover:bg-blue-800">
-            Expore Now!
+            Utforska Nu!
           </button>
         </div>
       </div>
@@ -58,10 +58,10 @@ const Carousel = () => {
         <img src={Carousel4} className="block w-full" alt="Carousel4" />
         <div className="">
           <h5 className="absolute mx-4 top-10 text-xl text-neutral-600">
-            Discover the New B Vertigo Collection
+            Upptäck Den Nya B Vertigo-Kollektionen.
           </h5>
           <button className="absolute mx-4 top-20 bg-blue-500 text-white p-2 rounded hover:bg-blue-800">
-            Expore Now!
+            Utforska Nu!
           </button>
         </div>
       </div>

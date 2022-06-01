@@ -18,7 +18,9 @@ export default function ProductList() {
 
   return (
     <div className="container static my-0 px-6 mx-auto">
-      <h1 className="text-3xl text-center font-bold mb-3 pt-8">Products</h1>
+      <h1 className="text-3xl text-center font-bold mb-3 pt-8 uppercase">
+        Produkter
+      </h1>
       <CategorySelect
         showAllOption
         bindTo={[s, "chosenCategoryId"]}
