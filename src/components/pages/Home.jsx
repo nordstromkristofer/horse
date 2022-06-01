@@ -4,13 +4,14 @@ import Testimonials from "../Testimonials";
 import ProductGallery from "../ProductGallery";
 import Carousel from "../Carousel";
 import SocialMedia from "../SocialMedia";
+import ProductLists from "../pages/Products/ProductLists";
 
 const Home = () => {
   return (
     <div className="">
       <Header />
       <Testimonials />
-      <ProductGallery />
+      <ProductLists />
       <Carousel />
       <SocialMedia />
     </div>
