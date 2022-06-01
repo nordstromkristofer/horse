@@ -17,32 +17,32 @@ import ShoppingCart from './ShoppingCart'
 import Home from './Home';
 
 // Create classes used for fetching from the REST-api
-const { Product, Categorie: Category } = factory;
+const { hästar, kategorier: hästraser } = factory;
 
 export default function App() {
 
   let s = useStates('main', {
-    products: [],
-    categories: [],
-    chosenCategoryId: 0,
+    hästar: [],
+    kategorier: [],
+    kateogriid: 0,
     cartContents: []
   });
 
   useEffect(() => {
     (async () => {
       // get the categories from the db
-      s.categories = await Category.find();
+      s.kategorier = await hästraser.find();
       // get the products from the db
-      s.products = await Product.find();
+      s.hästar = await hästar.find();
       // initilize the shopping cart
       // (this provides local storage of cartContents)
       init(s, 'cartContents');
     })();
   }, []);
 
-  return s.products.length ? <Router>
+  return s.hästar.length ? <Router>
     <Routes>
-    <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/product-list" element={<ProductList />} />
       <Route path="/product-detail/:id" element={<ProductDetail />} />
       <Route path="/product-edit/:id" element={<ProductEdit />} />

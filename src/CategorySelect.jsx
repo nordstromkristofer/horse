@@ -8,8 +8,8 @@ export default function CategorySelector(props) {
 
   return <select {...bindObject.bind(bindProperty)}>
     {showAllOption && <option key={0} value={0}>all</option>}
-    {s.categories.map(({ name, id }) =>
-      <option key={id} value={id}>{name}</option>
+    {s.kategorier.map(({ hästraser, id }) =>
+      <option key={id} value={id}>{hästraser}</option>
     )}
   </select>
 
