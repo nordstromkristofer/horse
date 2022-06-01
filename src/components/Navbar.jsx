@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to={`/shopping-cart`}>Varukorg</Link>
+          <Link to={`/shopping-cart`}>Varukorg 🛒</Link>
         </li>
       </ul>
 
@@ -115,7 +115,7 @@ const Navbar = () => {
         <li className="py-6 text-4xl">
           {" "}
           <Link onClick={handleClick} to={`/shopping-cart`}>
-            Varukorg
+            Varukorg 🛒
           </Link>
         </li>
       </ul>
