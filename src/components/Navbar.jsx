@@ -25,7 +25,7 @@ const Navbar = () => {
     setName(keyword);
   };
   return (
-    <div className="navbar navbar-expand-lg  w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
         <img src={Logo} alt="Logo Image" style={{ width: "50px" }} />
       </div>
@@ -34,9 +34,7 @@ const Navbar = () => {
 
       <ul className="hidden md:flex">
         <li>
-          <Link to="/" smooth={true} duration={500}>
-            Stallet
-          </Link>
+          <Link to="/">Stallet</Link>
         </li>
         <li>
           <Link
@@ -49,9 +47,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/shopping-cart" smooth={true} duration={500}>
-            Varukorg
-          </Link>
+          <Link to="/shopping-cart">Varukorg</Link>
         </li>
       </ul>
 
@@ -106,29 +102,19 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="/" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="/">
             Stallet
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link
-            onClick={handleClick}
-            to="/product-list"
-            smooth={true}
-            duration={500}
-          >
+          <Link onClick={handleClick} to="/product-list">
             Häster
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link
-            onClick={handleClick}
-            to="/shopping-cart"
-            smooth={true}
-            duration={500}
-          >
+          <Link onClick={handleClick} to="/shopping-cart">
             Varukorg
           </Link>
         </li>
