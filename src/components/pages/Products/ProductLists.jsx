@@ -18,7 +18,13 @@ export default function ProductList() {
 
   return (
     <div className="container static my-0 px-6 mx-auto">
-      <div class="grid static lg:grid-cols-3 gap-x-6 lg:gap-x-12 pt-80">
+      <h1 className="text-3xl text-center font-bold mb-3 pt-8">Products</h1>
+      <CategorySelect
+        showAllOption
+        bindTo={[s, "chosenCategoryId"]}
+        className="focus:bg-yellow-50"
+      />
+      <div class="grid static lg:grid-cols-3 gap-x-6 lg:gap-x-12 pt-20">
         {s.products
           .filter(
             (product) =>
@@ -31,7 +37,7 @@ export default function ProductList() {
               key={id}
               onClick={() => showDetail(id)}
             >
-              <div className="shadow-lg max-w-sm p-10 bg-gray-100 rounded-lg dark:border-gray-700 hover:bg-gray-300 transition-color duration-200 transform transition-all hover:scale-110">
+              <div className="shadow-lg max-w-sm p-10 bg-gray-50 rounded-lg dark:border-gray-700 hover:bg-gray-300 transition-color duration-200 transform transition-all hover:scale-110">
                 <div className="relative overflow-hidden bg-no-repeat bg-cover">
                   <img
                     onError={missingImage}
