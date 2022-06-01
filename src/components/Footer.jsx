@@ -6,7 +6,7 @@ const Footer = () => {
     <footer class="text-center lg:text-left bg-[#F9EBC8] text-gray-600">
       <div class="flex justify-center items-center lg:justify-between p-6 border-b border-orange-300">
         <div class="mr-12 hidden lg:block">
-          <span>Get connected with us on social networks:</span>
+          <span>Få kontakt med oss ​​på sociala nätverk:</span>
         </div>
         <div class="flex justify-center">
           <a href="#!" class="mr-6 text-gray-600">
@@ -151,57 +151,57 @@ const Footer = () => {
           </div>
           <div class="">
             <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-              Menu
+              Meny
             </h6>
             <p class="mb-4">
               <a href="#!" class="text-gray-600">
-                Equipment
+                Utrustning
               </a>
             </p>
             <p class="mb-4">
               <a href="#!" class="text-gray-600">
-                Horses
+                Hästar
               </a>
             </p>
             <p class="mb-4">
               <a href="#!" class="text-gray-600">
-                About Us
+                Om oss
               </a>
             </p>
             <p>
               <a href="#!" class="text-gray-600">
-                Terms & Conditions
+                Allmänna Villkor
               </a>
             </p>
           </div>
           <div class="">
             <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-              Useful links
+              Länkar
             </h6>
             <p class="mb-4">
               <a href="#!" class="text-gray-600">
-                Pricing
+                Pris
               </a>
             </p>
             <p class="mb-4">
               <a href="#!" class="text-gray-600">
-                Settings
+                Inställningar
               </a>
             </p>
             <p class="mb-4">
               <a href="#!" class="text-gray-600">
-                Orders
+                Bästellning
               </a>
             </p>
             <p>
               <a href="#!" class="text-gray-600">
-                Help
+                Hjälp
               </a>
             </p>
           </div>
           <div class="">
             <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-              Contact
+              Kontakt
             </h6>
             <p class="flex items-center justify-center md:justify-start mb-4">
               <svg
@@ -219,7 +219,7 @@ const Footer = () => {
                   d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
                 ></path>
               </svg>
-              New York, NY 10012, US
+              Stockholm, Sverige
             </p>
             <p class="flex items-center justify-center md:justify-start mb-4">
               <svg
