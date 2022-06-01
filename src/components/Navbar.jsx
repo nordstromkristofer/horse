@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
-import { Link } from "react-scroll";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -10,9 +8,22 @@ const Navbar = () => {
   function handleChange() {
     console.log(handleChange);
   }
+  const filter = (e) => {
+    const keyword = e.target.value;
 
+    if (keyword !== "") {
+      const results = Horses.filter((horse) => {
+        return;
+        user.horse.toLoweCase().startWith(keyword.toLowerCase());
+      });
+      setFoundHorses(results);
+    } else {
+      setFoundHorses(Horses);
+    }
+    setName(keyword);
+  };
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
+    <div className="navbar navbar-expand-lg w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
         <img src={Logo} alt="Logo Image" style={{ width: "50px" }} />
       </div>
@@ -21,17 +32,22 @@ const Navbar = () => {
 
       <ul className="hidden md:flex">
         <li>
-          <Link to="/" smooth={true} duration={500}>
+          <Link to={`/`} smooth={true} duration={500}>
             Stallet
           </Link>
         </li>
         <li>
-          <Link to="/product-list" smooth={true} duration={500}>
-            Häster
+          <Link
+            to={`/product-list`}
+            activeClass="active"
+            smooth={true}
+            duration={500}
+          >
+            Hästar
           </Link>
         </li>
         <li>
-          <Link to="/shopping-cart" smooth={true} duration={500}>
+          <Link to={`/shopping-cart`} smooth={true} duration={500}>
             Varukorg
           </Link>
         </li>
@@ -41,18 +57,19 @@ const Navbar = () => {
 
       <form class="rounded-md items-center flex divide-x">
         <select class="rounded-l-md  py-4">
-          <option selected="selected">All Category</option>
-          <option>Horses</option>
-          <option>Equipment</option>
-          <option>Edibles</option>
+          <option selected="selected">Kategorier</option>
+          <option>Hästar</option>
+          <option>Utrustning</option>
+          <option>Foder</option>
         </select>
         <input
           class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25"
           name="search"
-          placeholder="Search Products ....."
+          placeholder="Sök ....."
           type="search"
           onChange={handleChange}
         />
+
         <button class="py-3 px-2 bg-yellow-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -73,9 +90,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
 
-      <div onClick={handleClick} className="md:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
+      <div onClick={handleClick} className="md:hidden z-10"></div>
 
       {/* Mobile menu */}
 
@@ -87,7 +102,7 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="/" smooth={true} duration={500}>
+          <Link onClick={handleClick} to={`/`} smooth={true} duration={500}>
             Stallet
           </Link>
         </li>
@@ -95,18 +110,18 @@ const Navbar = () => {
           {" "}
           <Link
             onClick={handleClick}
-            to="/product-list"
+            to={`/product-list`}
             smooth={true}
             duration={500}
           >
-            Häster
+            Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
           <Link
             onClick={handleClick}
-            to="/shopping-cart"
+            to={`/shopping-cart`}
             smooth={true}
             duration={500}
           >
