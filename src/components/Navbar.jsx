@@ -54,14 +54,14 @@ const Navbar = () => {
       {/* Search Bar */}
 
       <form class="rounded-md items-center flex divide-x">
-        <select class="rounded-l-md  py-4">
+        <select class="rounded-l-md  py-4 focus:bg-yellow-50">
           <option selected="selected">Kategorier</option>
           <option>Hästar</option>
           <option>Utrustning</option>
           <option>Edibles</option>
         </select>
         <input
-          class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25"
+          class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-yellow-50 placeholder-gray-500 placeholder-opacity-25"
           name="search"
           placeholder="Sök ....."
           type="search"
