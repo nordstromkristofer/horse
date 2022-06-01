@@ -1,5 +1,4 @@
 import { useStates } from "../../../utilities/states";
-import { Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { scrollRestore } from "../../../utilities/scrollBehavior";
 import CategorySelect from "../CategorySelect";
@@ -18,8 +17,8 @@ export default function ProductList() {
   function missingImage(event) {}
 
   return (
-    <div className="container my-0 px-6 mx-auto">
-      <div class="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12 pt-80">
+    <div className="container static my-0 px-6 mx-auto">
+      <div class="grid static lg:grid-cols-3 gap-x-6 lg:gap-x-12 pt-80">
         {s.products
           .filter(
             (product) =>
