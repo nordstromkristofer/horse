@@ -24,7 +24,7 @@ export default function ProductList() {
       <CategorySelect
         showAllOption
         bindTo={[s, "chosenCategoryId"]}
-        className="focus:bg-yellow-50"
+        className=""
       />
       <div class="grid static lg:grid-cols-3 md:grid-cols-2 gap-x-6 lg:gap-x-12 pt-20 justify-center">
         {s.products
