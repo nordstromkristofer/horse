@@ -18,7 +18,7 @@ export default function ProductList() {
 
   return (
     <div className="container static my-0 px-6 mx-auto">
-      <h1 className="text-3xl text-center font-bold mb-3 pt-8 uppercase">
+      <h1 className="text-3xl text-center font-bold mb-3 pt-8 uppercase text-orange-500 tracking-wider">
         Produkter
       </h1>
       <CategorySelect
