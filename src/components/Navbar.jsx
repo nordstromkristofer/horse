@@ -14,16 +14,18 @@ const Navbar = () => {
     const keyword = e.target.value;
 
     if (keyword !== "") {
-      const results = Horses.filter((horse) => {
+      const results = product.filter((Products) => {
         return;
-        user.horse.toLoweCase().startWith(keyword.toLowerCase());
       });
       setFoundHorses(results);
     } else {
-      setFoundHorses(Horses);
+      setFoundHorses(product);
     }
     setName(keyword);
+    product.name.toLoweCase().startWith(keyword.toLowerCase());
   };
+
+
   return (
     <div className="sticky w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
@@ -53,7 +55,7 @@ const Navbar = () => {
 
       {/* Search Bar */}
 
-      <form class="rounded-md items-center flex divide-x">
+      <form class="rounded-md items-center flex divide-x" action="/product-list">
         <select class="rounded-l-md  py-4 focus:bg-yellow-50">
           <option selected="selected">Kategorier</option>
           <option>Hästar</option>
@@ -63,7 +65,7 @@ const Navbar = () => {
         <input
           class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-yellow-50 placeholder-gray-500 placeholder-opacity-25"
           name="search"
-          placeholder="Sök ....."
+          placeholder="sök ....."
           type="search"
           onChange={handleChange}
         />

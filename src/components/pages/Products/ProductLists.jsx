@@ -1,20 +1,25 @@
 import { useStates } from "../../../utilities/states";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { scrollRestore } from "../../../utilities/scrollBehavior";
 import CategorySelect from "../CategorySelect";
 import { sweFormat } from "../../../utilities/currencyFormatter";
+
+const useQuery = () => new URLSearchParams(useLocation().search);
 
 export default function ProductList() {
   scrollRestore();
 
   let s = useStates("main");
   let navigate = useNavigate();
+  let query = useQuery();
+
+  let searchParam = query.get('search')
 
   function showDetail(id) {
     navigate(`/product-detail/${id}`);
   }
 
-  function missingImage(event) {}
+  function missingImage(event) { }
 
   return (
     <div className="container static my-0 px-6 mx-auto">
@@ -30,8 +35,14 @@ export default function ProductList() {
         {s.products
           .filter(
             (product) =>
-              s.chosenCategoryId === 0 /* all */ ||
-              s.chosenCategoryId === product.categoryId
+              (
+                s.chosenCategoryId === 0 /* all */ ||
+                s.chosenCategoryId === product.categoryId)
+              &&
+              (!searchParam ||
+                product.name.includes(searchParam) || product.description.includes(searchParam))
+
+
           )
           .map(({ id, name, description, price }) => (
             <div
