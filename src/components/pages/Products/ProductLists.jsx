@@ -26,7 +26,7 @@ export default function ProductList() {
         bindTo={[s, "chosenCategoryId"]}
         className="focus:bg-yellow-50"
       />
-      <div class="grid static lg:grid-cols-3 gap-x-6 lg:gap-x-12 pt-20">
+      <div class="grid static lg:grid-cols-3 md:grid-cols-2 gap-x-6 lg:gap-x-12 pt-20">
         {s.products
           .filter(
             (product) =>
