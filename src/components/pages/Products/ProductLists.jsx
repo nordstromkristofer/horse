@@ -59,7 +59,7 @@ export default function ProductList() {
                   </p>
                 </div>
                 <div>
-                  <button className="inline-block text-xs leading-tight uppercase hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold m-2 py-2 px-4 border border-gray-400 rounded shadow">
+                  <button className="inline-block mx-0 mt-8 bg-blue-500 text-white p-2 rounded hover:bg-blue-800">
                     Fler detaljer
                   </button>
                 </div>
