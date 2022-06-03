@@ -44,6 +44,14 @@ export default function ProductDetail() {
         </Row>
         <Row>
           <Col>
+            <img
+              class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              src={`/images/horses/${id}.jpg`}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <h2 className="text-gray-900 text-xl font-medium mb-2">{name}</h2>
           </Col>
         </Row>

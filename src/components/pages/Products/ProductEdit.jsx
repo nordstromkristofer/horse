@@ -7,6 +7,7 @@ import {
   initializeMedia,
   captureImage,
   uploadPicture,
+  imagePicker,
 } from "../../../utilities/imageCapture";
 import { useState } from "react";
 
@@ -39,12 +40,14 @@ export default function ProductDetail() {
     await uploadPicture(id);
     // Navigate to detail page
     navigate(`/product-detail2/${id}`);
+    window.location.reload(false);
   }
 
   function takeImage() {
     captureImage();
     l.captureMode = false;
   }
+
   return (
     <Container className="product-edit">
       <Row>
@@ -59,6 +62,12 @@ export default function ProductDetail() {
             style={{ display: !l.captureMode ? "block" : "none" }}
           ></canvas>
           <button onClick={takeImage}>Ta Bild</button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h1>Välj bild</h1>
+          <input type="file" onChange={imagePicker} />
         </Col>
       </Row>
       <Row>
