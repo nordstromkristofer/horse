@@ -40,6 +40,7 @@ export default function ProductDetail() {
     await uploadPicture(id);
     // Navigate to detail page
     navigate(`/product-detail2/${id}`);
+    window.location.reload(false);
   }
 
   function takeImage() {
