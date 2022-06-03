@@ -77,6 +77,10 @@ export function captureImage() {
   picture = dataURItoBlob(canvasElement.toDataURL('image/jpeg', 0.8));
 }
 
+export function imagePicker() {
+  picture = event.target.files[0];
+}
+
 export async function uploadPicture(productId) {
   let formData = new FormData()
 
