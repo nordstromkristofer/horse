@@ -1,7 +1,5 @@
 import React from "react";
 import { useStates } from "../../utilities/states";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { empty, remove, save } from "../../utilities/shoppingCartLogic";
 import { useEffect } from "react";
 import { sweFormat } from "../../utilities/currencyFormatter";
