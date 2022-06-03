@@ -17,7 +17,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 // Create classes used for fetching from the REST-api
-const { Product, Categories: Category } = factory;
+const { Product, Categorie: Category } = factory;
 
 export default function App() {
   let s = useStates("main", {

@@ -19,7 +19,7 @@ const ShoppingCart = () => {
     save();
   });
   return (
-    <div className="">
+    <div className="pt-20">
       <div className="container mx-auto mt-10">
         <div className="flex shadow-md my-10">
           <div className="w-screen bg-white px-10 py-10">
@@ -31,13 +31,13 @@ const ShoppingCart = () => {
                 Produkter
               </h3>
 
-              <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">
+              <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">
                 Antal
               </h3>
-              <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">
+              <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">
                 Pris
               </h3>
-              <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">
+              <h3 className="font-semibold text-gray-600 text-xs uppercase w-1/5 text-center">
                 Sum
               </h3>
             </div>

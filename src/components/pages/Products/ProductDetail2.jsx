@@ -27,7 +27,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pt-20">
       <Container className="md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-10 m-5">
         <Row>
           <Col className="p-6 flex flex-col justify-start">

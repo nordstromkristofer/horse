@@ -4,9 +4,9 @@ import ProductList2 from "../Products/ProductList2";
 
 const Backoffice = () => {
   return (
-    <div>
-      <Create className="center" />
-      <ProductList2 className="center" />
+    <div className="pt-40 pb-40">
+      <Create />
+      <ProductList2 />
     </div>
   );
 };

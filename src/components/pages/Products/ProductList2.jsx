@@ -15,7 +15,7 @@ export default function ProductList2() {
   }
 
   return (
-    <Container className="flex justify-center">
+    <Container className=" flex justify-center ">
       <div className="w-full md:flex-row md:max-w-xl rounded-lg bg-white shadow p-10 m-5">
         <Row className="">
           <Col>
@@ -25,7 +25,7 @@ export default function ProductList2() {
         {s.products
           .filter(
             (product) =>
-              s.chosenCategoryId === 0 /*all*/ ||
+              s.chosenCategoryId === 0 ||
               s.chosenCategoryId === product.categoryId
           )
           .map(({ id, name }) => (

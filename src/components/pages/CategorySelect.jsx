@@ -6,10 +6,27 @@ export default function CategorySelector(props) {
   let [bindObject, bindProperty] = bindTo;
 
   return (
-    <select {...bindObject.bind(bindProperty)}>
+    <select
+      {...bindObject.bind(bindProperty)}
+      className="dropdown-toggle
+          px-6
+          py-2.5
+          text-gray-700
+          font-medium
+          text-xs
+          leading-tight
+          uppercase
+          rounded
+          transition
+          duration-150
+          ease-in-out
+          flex
+          items-center
+          whitespace-nowrap"
+    >
       {showAllOption && (
         <option key={0} value={0}>
-          all
+          Alla
         </option>
       )}
       {s.categories.map(({ name, id }) => (

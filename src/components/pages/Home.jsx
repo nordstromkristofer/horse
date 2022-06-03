@@ -1,18 +1,17 @@
 import React from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import HeroVid from "./HeroVid";
+import Header from "../Header";
 import Testimonials from "../Testimonials";
 import ProductGallery from "../ProductGallery";
 import Carousel from "../Carousel";
 import SocialMedia from "../SocialMedia";
+import ProductLists from "../pages/Products/ProductLists";
 
 const Home = () => {
   return (
     <div className="">
-      <HeroVid className="static" />
-
+      <Header />
       <Testimonials />
-      <ProductGallery />
+      <ProductLists />
       <Carousel />
       <SocialMedia />
     </div>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
+// import { Link } from "react-scroll";
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -12,18 +14,20 @@ const Navbar = () => {
     const keyword = e.target.value;
 
     if (keyword !== "") {
-      const results = Horses.filter((horse) => {
+      const results = product.filter((Products) => {
         return;
-        user.horse.toLoweCase().startWith(keyword.toLowerCase());
       });
       setFoundHorses(results);
     } else {
-      setFoundHorses(Horses);
+      setFoundHorses(product);
     }
     setName(keyword);
+    product.name.toLoweCase().startWith(keyword.toLowerCase());
   };
+
+
   return (
-    <div className="navbar navbar-expand-lg w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
+    <div className="sticky w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
         <img src={Logo} alt="Logo Image" style={{ width: "50px" }} />
       </div>
@@ -32,9 +36,7 @@ const Navbar = () => {
 
       <ul className="hidden md:flex">
         <li>
-          <Link to={`/`} smooth={true} duration={500}>
-            Stallet
-          </Link>
+          <Link to={`/`}>Stallet</Link>
         </li>
         <li>
           <Link
@@ -47,25 +49,23 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to={`/shopping-cart`} smooth={true} duration={500}>
-            Varukorg
-          </Link>
+          <Link to={`/shopping-cart`}>Varukorg 🛒</Link>
         </li>
       </ul>
 
       {/* Search Bar */}
 
-      <form class="rounded-md items-center flex divide-x">
-        <select class="rounded-l-md  py-4">
+      <form class="rounded-md items-center flex divide-x" action="/product-list">
+        <select class="rounded-l-md  py-4 focus:bg-yellow-50">
           <option selected="selected">Kategorier</option>
           <option>Hästar</option>
           <option>Utrustning</option>
-          <option>Foder</option>
+          <option>Edibles</option>
         </select>
         <input
-          class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-green-50 placeholder-gray-500 placeholder-opacity-25"
+          class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-yellow-50 placeholder-gray-500 placeholder-opacity-25"
           name="search"
-          placeholder="Sök ....."
+          placeholder="sök ....."
           type="search"
           onChange={handleChange}
         />
@@ -90,7 +90,9 @@ const Navbar = () => {
 
       {/* Hamburger */}
 
-      <div onClick={handleClick} className="md:hidden z-10"></div>
+      <div onClick={handleClick} className="md:hidden z-10">
+        {!nav ? <FaBars /> : <FaTimes />}
+      </div>
 
       {/* Mobile menu */}
 
@@ -102,30 +104,20 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to={`/`} smooth={true} duration={500}>
+          <Link onClick={handleClick} to={`/`}>
             Stallet
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link
-            onClick={handleClick}
-            to={`/product-list`}
-            smooth={true}
-            duration={500}
-          >
+          <Link onClick={handleClick} to={`/product-list`}>
             Hästar
           </Link>
         </li>
         <li className="py-6 text-4xl">
           {" "}
-          <Link
-            onClick={handleClick}
-            to={`/shopping-cart`}
-            smooth={true}
-            duration={500}
-          >
-            Varukorg
+          <Link onClick={handleClick} to={`/shopping-cart`}>
+            Varukorg 🛒
           </Link>
         </li>
       </ul>

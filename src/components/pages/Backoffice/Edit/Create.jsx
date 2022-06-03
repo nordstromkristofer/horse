@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Row } from "react-bootstrap";
 
 const Create = () => {
   const [horseData, setHorseData] = useState({
@@ -26,7 +26,11 @@ const Create = () => {
       })
     ).json();
     console.log(result);
+    window.location.reload(false);
   };
+
+  const [catState, setCatState] = useState("");
+  console.log(horseData.categoryId);
 
   return (
     <div className="flex justify-center">
@@ -65,7 +69,28 @@ const Create = () => {
           onChange={handleInputData}
           placeholder="Pris"
         />
-
+        <Row>
+          <select
+            className="dropdown-toggle
+          w-3/4 px-6 py-2.5 mb-2 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg
+          transition
+          duration-150
+          ease-in-out
+          flex
+          items-center
+          whitespace-nowrap
+          text-center"
+            onChange={(e) => {
+              const selectedCat = e.target.value;
+              setCatState(selectedCat);
+              horseData.categoryId = selectedCat;
+            }}
+          >
+            <option value={1}>Ponny</option>
+            <option value={2}>Travhäst</option>
+            <option value={3}>Islandshäst</option>
+          </select>
+        </Row>
         <Button
           type="submit"
           className="inline-block w-3/4 px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
