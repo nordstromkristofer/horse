@@ -49,7 +49,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <Container className="border rounded-md px-6 py-10 max-w-2xl mx-auto">
+    <Container className="product-edit">
       <Row>
         <Col>
           <video
