@@ -95,7 +95,7 @@ export default function ProductDetails() {
                 onClick={buy}
                 className="px-6 py-2 my-2 transition ease-in duration-200 uppercase hover:bg-green-800 hover:text-white border-2 border-gray-900 focus:outline-none"
               >
-                KÃ¶p
+                Köp
               </button>
             </label>
           </Col>

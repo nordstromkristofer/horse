@@ -49,88 +49,94 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="flex justify-center pt-20">
-      <div className="md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-10 m-5">
-        <div className="p-6 flex flex-col justify-start">
-          <video
-            style={{ display: l.captureMode ? "block" : "none" }}
-            autoPlay
-          ></video>
-          <canvas
-            width="320px"
-            height="240px"
-            style={{ display: !l.captureMode ? "block" : "none" }}
-          ></canvas>
-          <button onClick={takeImage}>Ta Bild</button>
+    <form>
+      <div className="min-h-screen md:px-20 pt-6">
+        <div className="bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
+          <div className="block mr-8 border border-solid border-gray-300 rounded">
+            <div className="">
+              <video
+                style={{ display: l.captureMode ? "block" : "none" }}
+                autoPlay
+              ></video>
+              <canvas
+                width="320px"
+                height="240px"
+                style={{ display: !l.captureMode ? "block" : "none" }}
+              ></canvas>
+              <button onClick={takeImage}>Ta Bild</button>
+            </div>
+            <div>
+              <h1>Välj bild</h1>
+              <input type="file" onChange={imagePicker} />
+            </div>
+          </div>
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <div>
+            <div>
+              <h1>{name}</h1>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>{description}</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Price: {price} SEK</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <label className="mt-3">
+                Name:
+                <input className="form-control" {...product.bind("name")} />
+              </label>
+            </div>
+          </div>
+          <div>
+            <div>
+              <label className="mt-3">
+                Description:
+                <textarea
+                  className="form-control"
+                  {...product.bind("description")}
+                />
+              </label>
+            </div>
+          </div>
+          <div>
+            <div>
+              <label className="mt-3">
+                Price:
+                <input
+                  type="number"
+                  className="form-control"
+                  {...product.bind("price")}
+                />
+              </label>
+            </div>
+          </div>
+          <div className="mt-4">
+            <div>
+              <label>
+                Category:&nbsp;
+                <CategorySelect bindTo={[product, "categoryId"]} />
+              </label>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={save}
+            className="my-4 btn btn-primary float-end"
+          >
+            Save
+          </button>
         </div>
       </div>
-      <div>
-        <div>
-          <h1>Välj bild</h1>
-          <input type="file" onChange={imagePicker} />
-        </div>
-      </div>
-      <div>
-        <div>
-          <h1>{name}</h1>
-        </div>
-      </div>
-      <div>
-        <div>
-          <p>{description}</p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <p>Price: {price} SEK</p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <label className="mt-3">
-            Name:
-            <input className="form-control" {...product.bind("name")} />
-          </label>
-        </div>
-      </div>
-      <div>
-        <div>
-          <label className="mt-3">
-            Description:
-            <textarea
-              className="form-control"
-              {...product.bind("description")}
-            />
-          </label>
-        </div>
-      </div>
-      <div>
-        <div>
-          <label className="mt-3">
-            Price:
-            <input
-              type="number"
-              className="form-control"
-              {...product.bind("price")}
-            />
-          </label>
-        </div>
-      </div>
-      <div className="mt-4">
-        <div>
-          <label>
-            Category:&nbsp;
-            <CategorySelect bindTo={[product, "categoryId"]} />
-          </label>
-        </div>
-      </div>
-      <button
-        type="button"
-        onClick={save}
-        className="my-4 btn btn-primary float-end"
-      >
-        Save
-      </button>
-    </div>
+    </form>
   );
 }
