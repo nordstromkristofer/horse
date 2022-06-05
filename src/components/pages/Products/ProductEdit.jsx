@@ -49,9 +49,9 @@ export default function ProductDetail() {
   }
 
   return (
-    <Container className="product-edit">
-      <Row>
-        <Col>
+    <div className="product-edit">
+      <div>
+        <div>
           <video
             style={{ display: l.captureMode ? "block" : "none" }}
             autoPlay
@@ -62,39 +62,39 @@ export default function ProductDetail() {
             style={{ display: !l.captureMode ? "block" : "none" }}
           ></canvas>
           <button onClick={takeImage}>Ta Bild</button>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <h1>Välj bild</h1>
           <input type="file" onChange={imagePicker} />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <h1>{name}</h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <p>{description}</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <p>Price: {price} SEK</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <label className="mt-3">
             Name:
             <input className="form-control" {...product.bind("name")} />
           </label>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <label className="mt-3">
             Description:
             <textarea
@@ -102,10 +102,10 @@ export default function ProductDetail() {
               {...product.bind("description")}
             />
           </label>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+      </div>
+      <div>
+        <div>
           <label className="mt-3">
             Price:
             <input
@@ -114,16 +114,16 @@ export default function ProductDetail() {
               {...product.bind("price")}
             />
           </label>
-        </Col>
-      </Row>
-      <Row className="mt-4">
-        <Col>
+        </div>
+      </div>
+      <div className="mt-4">
+        <div>
           <label>
             Category:&nbsp;
             <CategorySelect bindTo={[product, "categoryId"]} />
           </label>
-        </Col>
-      </Row>
+        </div>
+      </div>
       <button
         type="button"
         onClick={save}
@@ -131,6 +131,6 @@ export default function ProductDetail() {
       >
         Save
       </button>
-    </Container>
+    </div>
   );
 }
