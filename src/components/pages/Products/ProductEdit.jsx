@@ -50,8 +50,50 @@ export default function ProductDetail() {
 
   return (
     <form>
-      <div className="min-h-screen md:px-20 pt-6">
-        <div className="bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
+      <div className="px-4 py-6 sm:grid grid-cols-2 gap-x-6 max-w-4xl mx-auto justify-center">
+        <div className="rounded-md px-6 py-10 max-w-2xl mx-auto">
+          <h1 className="text-center text-2xl font-bold text-orange-600 my-8">
+            Edit Product Information
+          </h1>
+          <div class="flex-col space-y-4 mb-4">
+            <div>
+              <div>
+                <h1 className="uppercase">{name}</h1>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>{description}</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>Price: {price} SEK</p>
+              </div>
+            </div>
+
+            <label className="my-4">
+              Edit Name:
+              <input
+                class="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                {...product.bind("name")}
+              />
+            </label>
+            <label className="my-4">
+              Edit Description:
+              <input
+                class="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                {...product.bind("description")}
+              />
+            </label>
+            <label className="my-4">
+              Edit Price:
+              <input
+                class="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                {...product.bind("price")}
+              />
+            </label>
+          </div>
           <div className="block mr-8 border border-solid border-gray-300 rounded">
             <div className="">
               <video
@@ -66,58 +108,7 @@ export default function ProductDetail() {
               <button onClick={takeImage}>Ta Bild</button>
             </div>
             <div>
-              <h1>Välj bild</h1>
               <input type="file" onChange={imagePicker} />
-            </div>
-          </div>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <div>
-            <div>
-              <h1>{name}</h1>
-            </div>
-          </div>
-          <div>
-            <div>
-              <p>{description}</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <p>Price: {price} SEK</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <label className="mt-3">
-                Name:
-                <input className="form-control" {...product.bind("name")} />
-              </label>
-            </div>
-          </div>
-          <div>
-            <div>
-              <label className="mt-3">
-                Description:
-                <textarea
-                  className="form-control"
-                  {...product.bind("description")}
-                />
-              </label>
-            </div>
-          </div>
-          <div>
-            <div>
-              <label className="mt-3">
-                Price:
-                <input
-                  type="number"
-                  className="form-control"
-                  {...product.bind("price")}
-                />
-              </label>
             </div>
           </div>
           <div className="mt-4">
