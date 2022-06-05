@@ -25,7 +25,6 @@ const Navbar = () => {
     product.name.toLoweCase().startWith(keyword.toLowerCase());
   };
 
-
   return (
     <div className="sticky w-full h-[80px] flex justify-between items-center px-4 bg-[#F9EBC8] text-black-300">
       <div>
@@ -55,22 +54,19 @@ const Navbar = () => {
 
       {/* Search Bar */}
 
-      <form class="rounded-md items-center flex divide-x" action="/product-list">
-        <select class="rounded-l-md  py-4 focus:bg-yellow-50">
-          <option selected="selected">Kategorier</option>
-          <option>Hästar</option>
-          <option>Utrustning</option>
-          <option>Edibles</option>
-        </select>
+      <form
+        class="rounded-md items-center flex divide-x"
+        action="/product-list"
+      >
         <input
-          class="py-3.5 px-2 appearance-none block w-full  focus:outline-none focus:bg-yellow-50 placeholder-gray-500 placeholder-opacity-25"
+          class="py-3.5 px-2 appearance-none block w-full rounded-l-md focus:outline-none focus:bg-yellow-50 placeholder-gray-500 placeholder-opacity-25"
           name="search"
           placeholder="sök ....."
           type="search"
           onChange={handleChange}
         />
 
-        <button class="py-3 px-2 bg-yellow-400">
+        <button class="py-3 px-2 bg-yellow-400 rounded-r-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-8 text-gray-50 "
