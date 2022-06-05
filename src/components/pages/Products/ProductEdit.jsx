@@ -55,41 +55,43 @@ export default function ProductDetail() {
           <h1 className="text-center text-2xl font-bold text-orange-600 my-8">
             Edit Product Information
           </h1>
-          <div class="flex-col space-y-4 mb-4">
-            <div>
+          <div className="flex flex-col">
+            <div className="space-y-2 my-4">
               <div>
-                <h1 className="uppercase">{name}</h1>
+                <div>
+                  <h1 className="uppercase text-center">{name}</h1>
+                </div>
               </div>
-            </div>
-            <div>
               <div>
-                <p>{description}</p>
+                <div className="text-justify">
+                  <p>{description}</p>
+                </div>
               </div>
-            </div>
-            <div>
               <div>
-                <p>Price: {price} SEK</p>
+                <div>
+                  <p>Price: {price} SEK</p>
+                </div>
               </div>
             </div>
 
-            <label className="my-4">
+            <label className="">
               Edit Name:
               <input
-                class="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                className="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("name")}
               />
             </label>
-            <label className="my-4">
+            <label className="">
               Edit Description:
-              <input
-                class="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+              <textarea
+                className="my-4 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("description")}
               />
             </label>
             <label className="my-4">
               Edit Price:
               <input
-                class="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                className="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("price")}
               />
             </label>
