@@ -1,3 +1,12 @@
+
+                                 ________       .__       .___                ___ ___                             
+                                /  _____/  ____ |  |    __| _/____   ____    /   |   \  ___________  ______ ____  
+                               /   \  ___ /  _ \|  |   / __ |/ __ \ /    \  /    ~    \/  _ \_  __ \/  ___// __ \ 
+                               \    \_\  (  <_> )  |__/ /_/ \  ___/|   |  \ \    Y    (  <_> )  | \/\___ \\  ___/ 
+                                \______  /\____/|____/\____ |\___  >___|  /  \___|_  / \____/|__|  /____  >\___  >
+                                       \/                  \/    \/     \/         \/                   \/     \/ 
+
+
 The project was created as the final assignment for the course "Advanced web development with JavaScript (Kurs)" under the "Frontend developer web security" education. 
 
 This project involves a Webshop where one can shop for the finest steeds for the mightiest of adventures.
