@@ -53,7 +53,7 @@ export default function ProductDetail() {
       <div className="block bg-white">
         <div className="border rounded-md px-6 py-10 max-w-2xl mx-auto">
           <h1 className="text-center text-2xl font-bold text-orange-600 my-8">
-            Edit Product Information
+            Redigera produktinformation
           </h1>
           <div className="flex-col">
             <div className="space-y-2 my-2">
@@ -69,19 +69,19 @@ export default function ProductDetail() {
               </div>
               <div>
                 <div>
-                  <p>Price: {price} SEK</p>
+                  <p>Pris: {price} SEK</p>
                 </div>
               </div>
             </div>
             <label className="">
-              Edit Name:
+              Redigera namnet:
               <input
                 className="form-control my-2 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("name")}
               />
             </label>
             <label className="">
-              Edit Description:
+              Redigera beskrivningen:
               <textarea
                 rows={4}
                 className="form-control my-2 resize-none border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
@@ -89,7 +89,7 @@ export default function ProductDetail() {
               />
             </label>
             <label className="my-2">
-              Edit Price:
+              Redigera priset:
               <input
                 className="form-control my-2 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("price")}
@@ -98,7 +98,7 @@ export default function ProductDetail() {
           </div>
           <div>
             <label>
-              Category:&nbsp;
+              Kategori:&nbsp;
               <CategorySelect bindTo={[product, "categoryId"]} />
             </label>
           </div>
@@ -149,7 +149,7 @@ export default function ProductDetail() {
       duration-150
       ease-in-out"
           >
-            Save
+            Spara
           </button>
         </div>
       </div>

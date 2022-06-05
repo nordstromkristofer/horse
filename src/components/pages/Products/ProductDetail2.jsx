@@ -67,7 +67,7 @@ export default function ProductDetail() {
         </Row>
         <Row>
           <Col>
-            <p className="text-gray-700 text-base mb-4">Price: {price} SEK</p>
+            <p className="text-gray-700 text-base mb-4">Pris: {price} SEK</p>
           </Col>
         </Row>
         <Row>
