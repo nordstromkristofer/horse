@@ -39,7 +39,7 @@ export default function ProductDetails() {
                 type="button"
                 className="my-4 btn p-1 btn-primary hover:text-gray-200 hover:bg-gray-500 hover:p-1 hover:rounded"
               >
-                Back to list
+                Tillbaka till listan
               </button>
               <hr />
             </Link>
@@ -60,7 +60,7 @@ export default function ProductDetails() {
         </Row>
         <Row className="mb-3">
           <Col>
-            <h4>Category: {categoryName}</h4>
+            <h4>Kategori: {categoryName}</h4>
           </Col>
         </Row>
         <Row>
@@ -71,7 +71,7 @@ export default function ProductDetails() {
         <Row>
           <Col>
             <p className="text-gray-700 text-base mb-4">
-              Price: {sweFormat(price)}{" "}
+              Pris: {sweFormat(price)}{" "}
             </p>
           </Col>
         </Row>

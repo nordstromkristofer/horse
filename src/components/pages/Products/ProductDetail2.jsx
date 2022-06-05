@@ -36,7 +36,7 @@ export default function ProductDetail() {
                 type="button"
                 className="my-4 btn p-1 btn-primary hover:text-gray-200 hover:bg-gray-500 hover:p-1 hover:rounded"
               >
-                Back to list
+                Tillbaka till listan
               </button>
               <hr />
             </Link>
@@ -57,7 +57,7 @@ export default function ProductDetail() {
         </Row>
         <Row className="mb-3">
           <Col>
-            <h4>Category: {categoryName}</h4>
+            <h4>Kategori: {categoryName}</h4>
           </Col>
         </Row>
         <Row>
@@ -80,7 +80,7 @@ export default function ProductDetail() {
                 type="button"
                 className="rounded-l inline-block px-6 py-2.5 bg-yellow-600 text-white font-medium text-xs leading-tight uppercase hover:bg-yellow-700 focus:bg-yellow-700 focus:outline-none focus:ring-0 active:bg-yellow-800 transition duration-150 ease-in-out"
               >
-                Edit
+                Redigera
               </button>
             </Link>
             <Link to={`/product-edit/${id}`}>
@@ -90,7 +90,7 @@ export default function ProductDetail() {
                 onClick={deleteBtn}
                 className="rounded-r inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase hover:bg-red-700 focus:bg-red-700 focus:outline-none focus:ring-0 active:bg-red-800 transition duration-150 ease-in-out"
               >
-                Delete
+                Ta bort
               </Button>
             </Link>
           </Col>
