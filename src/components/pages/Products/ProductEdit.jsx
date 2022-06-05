@@ -49,14 +49,14 @@ export default function ProductDetail() {
   }
 
   return (
-    <form>
-      <div className="px-4 py-6 sm:grid grid-cols-2 gap-x-6 max-w-4xl mx-auto justify-center">
-        <div className="rounded-md px-6 py-10 max-w-2xl mx-auto">
+    <form className="block p-6 rounded-lg shadow-lg bg-white">
+      <div className="block bg-white">
+        <div className="border rounded-md px-6 py-10 max-w-2xl mx-auto">
           <h1 className="text-center text-2xl font-bold text-orange-600 my-8">
             Edit Product Information
           </h1>
-          <div className="flex flex-col">
-            <div className="space-y-2 my-4">
+          <div className="flex-col">
+            <div className="space-y-2 my-2">
               <div>
                 <div>
                   <h1 className="uppercase text-center">{name}</h1>
@@ -73,30 +73,36 @@ export default function ProductDetail() {
                 </div>
               </div>
             </div>
-
             <label className="">
               Edit Name:
               <input
-                className="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                className="form-control my-2 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("name")}
               />
             </label>
             <label className="">
               Edit Description:
               <textarea
-                className="my-4 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                rows={4}
+                className="form-control my-2 resize-none border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("description")}
               />
             </label>
-            <label className="my-4">
+            <label className="my-2">
               Edit Price:
               <input
-                className="border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
+                className="form-control my-2 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700 outline-none"
                 {...product.bind("price")}
               />
             </label>
           </div>
-          <div className="block mr-8 border border-solid border-gray-300 rounded">
+          <div>
+            <label>
+              Category:&nbsp;
+              <CategorySelect bindTo={[product, "categoryId"]} />
+            </label>
+          </div>
+          <div className="my-2 border-2 w-full px-4 py-2 rounded-md text-md text-gray-700">
             <div className="">
               <video
                 style={{ display: l.captureMode ? "block" : "none" }}
@@ -107,24 +113,41 @@ export default function ProductDetail() {
                 height="240px"
                 style={{ display: !l.captureMode ? "block" : "none" }}
               ></canvas>
-              <button onClick={takeImage}>Ta Bild</button>
+              <button
+                onClick={takeImage}
+                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              >
+                Ta Bild
+              </button>
             </div>
             <div>
-              <input type="file" onChange={imagePicker} />
+              <input
+                type="file"
+                className="my-4  inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                onChange={imagePicker}
+              />
             </div>
           </div>
-          <div className="mt-4">
-            <div>
-              <label>
-                Category:&nbsp;
-                <CategorySelect bindTo={[product, "categoryId"]} />
-              </label>
-            </div>
-          </div>
+          <div className="mt-4"></div>
           <button
-            type="button"
             onClick={save}
-            className="my-4 btn btn-primary float-end"
+            className="w-full
+      px-6
+      py-2.5
+      bg-blue-600
+      text-white
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      rounded
+      shadow-md
+      hover:bg-blue-700 hover:shadow-lg
+      focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+      active:bg-blue-800 active:shadow-lg
+      transition
+      duration-150
+      ease-in-out"
           >
             Save
           </button>
