@@ -49,9 +49,9 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="product-edit">
-      <div>
-        <div>
+    <div className="flex justify-center pt-20">
+      <div className="md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-10 m-5">
+        <div className="p-6 flex flex-col justify-start">
           <video
             style={{ display: l.captureMode ? "block" : "none" }}
             autoPlay
