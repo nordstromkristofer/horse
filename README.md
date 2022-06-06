@@ -9,7 +9,7 @@
 
 The project was created as the final assignment for the course "**Advanced web development with JavaScript (Kurs)**" under the "**Frontend developer web security**" education. 
 
-This project involves a Webshop where one can shop for the finest steeds for the mightiest of adventures. We are aiming for the G grade; you can find the final version under the dbImplantation branch.
+This project involves a Webshop where one can shop for the finest steeds for the mightiest of adventures. We are aiming for the G grade; you can find the final version under the **dbImplantation** branch.
 
 Following is a list of contributors and their contributions:
 
