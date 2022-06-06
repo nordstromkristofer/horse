@@ -13,7 +13,7 @@ This project involves a Webshop where one can shop for the finest steeds for the
 
 Following is a list of contributors and their contributions:
 
-Sara Razm (sararazm) & Mohammad Arefi (Gogoreds): Innitial design, Front-end coding and styling of the project; After the innitial design on FIGMA, we used ReactJS and TailwindCSS to create a visually pleasent design for the users.
+** Sara Razm (sararazm) & Mohammad Arefi (Gogoreds):** Innitial design, Front-end coding and styling of the project; After the innitial design on FIGMA, we used ReactJS and TailwindCSS to create a visually pleasent design for the users.
 
 Lilhem Yowhanes (ezelnali) & Kim Garcia Haas (Kgh136): Search function and Database implantation; Using JavaScript, ReactJS and SQLite, we have created a functional search box and filtering option for the website.
 
